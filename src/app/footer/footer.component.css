@@ -1,0 +1,21 @@
+.footer {
+    background-color: #012448; /* Add background color */
+    color: #ffffff; /* Set text color to white */
+    padding: 20px; /* Increase padding for better spacing */
+    text-align: center; /* Center-align text */
+}
+
+.container {
+    max-width: 1200px; /* Limit maximum width of content */
+    margin: 0 auto; /* Center-align container */
+}
+
+.container span {
+    display: block; /* Display spans as block elements for better spacing */
+    margin-bottom: 10px; /* Add spacing between spans */
+    font-size: 14px; /* Adjust font size */
+}
+
+.container span:first-child {
+    font-weight: bold; /* Make the first span bold */
+}

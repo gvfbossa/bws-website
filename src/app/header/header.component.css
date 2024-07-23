@@ -1,0 +1,105 @@
+.header {
+  top: 0;
+  color: #fff;
+  text-align: center;
+  position: sticky;
+  z-index: 9999;
+  transition: background-color 0.5s ease, padding 0.5s ease;
+  background: rgba(0, 0, 0, 0);
+  padding: 20px 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 6vw;
+  margin-right: 10px;
+  transition: height 0.5s ease;
+}
+
+.logo-text {
+  font-family: 'aatmospheric', 'arial', sans-serif;
+  font-size: 2.3em;
+  -webkit-text-stroke: 0.5px whitesmoke;
+  transition: opacity 0.5s ease, font-size 0.5s ease;
+  background: linear-gradient(to right, #808080, #d3d3d3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+}
+
+/* Apply gradient to the first letter of each word */
+.first-letter {
+  background: linear-gradient(to right, #0052cc, #66b2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Adjust for sticky header */
+.header.sticky .logo-text {
+  opacity: 0;
+  font-size: 0;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-links a {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin: 0 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #1c1c1c;
+  border-radius: 5px;
+}
+
+.header.sticky {
+  background-color: #012448;
+  padding: 10px 10px;
+}
+
+.header.sticky .logo {
+  height: 5.5vw;
+}
+
+.icon {
+  font-size: 1.5em;
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 6vw;
+  }
+  .navbar-links a {
+    font-size: 2.5vw;
+    padding: 8px 10px;
+    margin-right: 5px;
+  }
+}

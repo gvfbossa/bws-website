@@ -1,0 +1,181 @@
+.container {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.p-adjust {
+  font-size: 1.2rem;
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+
+.img {
+  margin-left: 30px;
+  margin-right: 0;
+  width: 45vw;
+  height: auto;
+}
+
+.stacked-text {
+  text-align: left;
+  margin-top: 0px;
+}
+
+.title-component {
+  color: #00aaff;
+  font-size: 2.5rem;
+}
+
+.paragraph-component {
+  font-size: 1rem;
+  line-height: 1.6;
+  width: 90%;
+}
+
+.separator {
+  height: 2px;
+  background-color: black;
+  margin: 50px auto;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .flex-align {
+      flex-direction: column;
+  }
+
+  .img {
+      margin-left: 0;
+      margin-bottom: 20px;
+      width: 80vw;
+  }
+
+  .title-component {
+      font-size: 2rem;
+  }
+
+  .paragraph-component {
+      font-size: 1rem;
+  }
+
+  .separator {
+      margin: 30px auto;
+      background-color: black;
+  }
+}
+
+.terminal-dash {
+  display: inline-block;
+  width: 10px;
+  height: 25px;
+  background-color: #00aaff;
+  animation: dash-in-out 1s infinite alternate;
+}
+
+@keyframes dash-in-out {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.display-input {
+  display: flex;
+}
+
+input {
+  align-items: flex-start;
+  height: 4vh;
+  width: 100%;
+  border-radius: 5px;
+  display: inline;
+  border: 0;
+  background-color: #292929;
+  color: white;
+}
+
+h3 {
+  width: 90%;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+.typewriter {
+    overflow: hidden; /* Ensures the text is not visible outside its container */
+    white-space: nowrap; /* Keeps the text on a single line */
+    border-right: .15em solid orange; /* Creates the typewriter cursor effect */
+    font-size: 1.2rem;
+    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+.typing-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.typed-word {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .flex-align {
+        flex-direction: column;
+    }
+
+    .img {
+        margin-left: 0;
+        margin-bottom: 20px;
+        width: 80vw;
+    }
+
+    .title-component {
+        font-size: 2rem;
+    }
+
+    .paragraph-component {
+        font-size: 1rem;
+    }
+
+    .separator {
+        margin: 30px auto;
+        background-color: black;
+    }
+}
