@@ -50,7 +50,7 @@
 
 .img {
     margin-right: 3vw;
-    width: 90%;
+    width: 40vw;
     height: auto;
 }
 
@@ -86,7 +86,7 @@
 
 .paragraph-component {
     padding: 3px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     margin-bottom: 10px;
 }
