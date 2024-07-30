@@ -28,6 +28,18 @@ export class HeaderComponent {
       } else {
         header.classList.remove('sticky');
       }
+      this.closeMenu();
     }
   }
+
+  menuActive: boolean = false;
+
+  toggleMenu() {
+    this.menuActive = !this.menuActive;
+  }
+
+  closeMenu() {
+    this.menuActive = false;
+  }
+  
 }

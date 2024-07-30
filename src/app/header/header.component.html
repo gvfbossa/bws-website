@@ -2,9 +2,16 @@
   <div class="container">
     <a class="navbar-brand" href="#">
       <img class="logo" src="assets/images/bws-logo-solo.png" alt="Bossa Web Solutions"/>
-      <span class="logo-text"><b class="first-letter">B</b>OSSA <b class="first-letter">W</b>EB <b class="first-letter">S</b>OLUTIONS</span>
+      <span class="logo-text">
+        <b class="first-letter">B</b>OSSA <b class="first-letter">W</b>EB <b class="first-letter">S</b>OLUTIONS
+      </span>
     </a>
-    <div class="navbar-links">
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="navbar-links" [class.active]="menuActive">
       <a (click)="scrollTo('about')">
         <mat-icon class="icon">info</mat-icon> Sobre
       </a>

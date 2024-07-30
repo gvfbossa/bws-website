@@ -16,6 +16,7 @@ body {
     background-position: top right;
     background-size: 35%;
     z-index: 9999;
+    width: 100%;
 }
 
 .container {
