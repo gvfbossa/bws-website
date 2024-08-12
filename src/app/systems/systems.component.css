@@ -156,26 +156,49 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    .flex-align {
-        flex-direction: column;
-    }
+  .flex-align {
+    flex-direction: column;
+  }
 
-    .img {
-        margin-left: 0;
-        margin-bottom: 20px;
-        width: 80vw;
-    }
+  .terminal-dash {
+    width: 10px;
+    height: 18px;
+  }
 
-    .title-component {
-        font-size: 2rem;
-    }
+  .img {
+    margin-top: 20px;
+    margin-left: 0;
+    width: 80vw;
+  }
 
-    .paragraph-component {
-        font-size: 1rem;
-    }
+  .stacked-text {
+    text-align: center;
+  }
 
-    .separator {
-        margin: 30px auto;
-        background-color: black;
-    }
+  .title-component {
+    font-size: 1.5rem;
+  }
+
+  .paragraph-component {
+    margin-top: 10px;
+    font-size: 1rem;
+    width: 100%;
+    max-height: 110px;
+    overflow-y: auto;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .separator {
+    margin: 30px auto;
+    width: 90%;
+  }
+
+  .separator {
+    height: 100px;
+    margin: 0;
+    padding: 0;
+  }
 }

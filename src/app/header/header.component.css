@@ -7,12 +7,14 @@
   transition: background-color 0.5s ease, padding 0.5s ease;
   background: rgba(0, 0, 0, 0);
   padding: 20px 10px;
+  width: 100%; /* Ensure header occupies full width */
 }
 
 .container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%; /* Ensure container occupies full width */
 }
 
 .navbar-brand {
@@ -55,6 +57,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%; /* Ensure navbar links occupy full width */
 }
 
 .navbar-links a {
@@ -79,6 +82,7 @@
 .header.sticky {
   background-color: #012448;
   padding: 10px 10px;
+  width: 100%; /* Ensure sticky header occupies full width */
 }
 
 .header.sticky .logo {
@@ -97,6 +101,8 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 10000;
+  padding-bottom: 15px;
 }
 
 .hamburger span {
@@ -113,6 +119,7 @@
     width: 100%;
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .navbar-links.active {
@@ -126,13 +133,15 @@
 
   .icon {
     font-size: 2vh;
+    padding-bottom: 1px;
+    margin-right: 0px;
+    align-items: flex-start;
   }
 
   .logo-text {
     margin: 0;
     font-size: 3vh;
     flex-wrap: wrap;
-    
   }
 
   .navbar-links a {

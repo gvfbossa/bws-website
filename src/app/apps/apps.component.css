@@ -106,3 +106,51 @@
     margin-bottom: 5vh;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .smartphone {
+        width: 80%;
+    }
+
+    .box-align {
+        width: 90%; /* Adjusted to fit better on mobile screens */
+    }
+
+    .imgs {
+        align-items: center;
+    }
+
+    .imgs img {
+        width: 15vw; /* Adjust image width for better fit on mobile */
+        margin: 10px; /* Add vertical spacing between images */
+    }
+
+    .p-adjust {
+        width: 90%; /* Ensures text takes up more screen space */
+        font-size: 1rem; /* Slightly smaller font size for readability */
+        width: 90%;
+        max-height: 110px;
+        overflow-y: auto;
+        margin-bottom: 30px;
+    }
+
+    .title-component {
+        font-size: 1.5rem; /* Slightly smaller title font size */
+        margin-bottom: 20px;
+    }
+
+    .h3-align {
+        font-size: 1rem; /* Adjusted font size */
+        margin-top: 5vh; /* Reduced margin-top for better spacing */
+    }
+
+    .round-btn {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .round-btn:hover {
+        width: 8vw;
+        height: 8vw;
+    }
+}
