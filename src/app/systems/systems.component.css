@@ -197,7 +197,7 @@ h1 {
   }
 
   .separator {
-    height: 100px;
+    height: 0px;
     margin: 0;
     padding: 0;
   }
