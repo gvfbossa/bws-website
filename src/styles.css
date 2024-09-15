@@ -12,7 +12,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     background-color: #000;
-    background-image: url('/assets/images/ladrilhos_bws.png');
+    background-image: url('/assets/images/background_ladrilhos.png');
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 35%;
@@ -26,7 +26,7 @@ body {
     align-self: center;
     align-content: center;
     flex-direction: column;
-    width: 100%; /* Ensure container occupies full width */
+    width: 100%;
 }
 
 .separator {
@@ -106,14 +106,14 @@ p {
     transition: background-color 0.5s ease, padding 0.5s ease;
     background: rgba(0, 0, 0, 0);
     padding: 20px 10px;
-    width: 100%; /* Ensure header occupies full width */
+    width: 100%;
 }
 
 .container {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%; /* Ensure container occupies full width */
+    width: 100%;
 }
 
 .navbar-brand {
@@ -126,8 +126,8 @@ p {
     height: 6vw;
     margin-right: 10px;
     transition: height 0.5s ease;
-    min-width: 50px; /* Set a minimum width */
-    min-height: 50px; /* Set a minimum height */
+    min-width: 50px;
+    min-height: 50px;
 }
 
 .logo-text {
@@ -156,7 +156,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Ensure navbar links occupy full width */
+    width: 100%;
 }
 
 .navbar-links a {
@@ -181,7 +181,7 @@ p {
 .header.sticky {
     background-color: #012448;
     padding: 10px 10px;
-    width: 100%; /* Ensure sticky header occupies full width */
+    width: 100%;
 }
 
 .header.sticky .logo {

@@ -6,19 +6,16 @@
   z-index: 9999;
   transition: background-color 0.5s ease, padding 0.5s ease;
   background: rgba(0, 0, 0, 0);
-  padding: 20px 0px;
-  width: 100%; /* Ensure header occupies full width */
-  overflow-x: hidden; /* Prevent overflow */
-
+  padding: 20px 0;
+  width: 100%;
 }
 
 .container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%; /* Ensure container occupies full width */
-  max-width: 100vw; /* Prevent container from overflowing */
-  margin: 0 auto; /* Center the container */
+  width: 100%;
+  margin: 0 auto;
 }
 
 .navbar-brand {
@@ -31,19 +28,18 @@
   height: 6vw;
   margin-right: 10px;
   transition: height 0.5s ease;
-  min-width: 50px; /* Set a minimum width */
-  min-height: 50px; /* Set a minimum height */
+  min-width: 50px;
+  min-height: 50px;
 }
 
 .logo-text {
   font-family: 'aatmospheric', 'arial', sans-serif;
   font-size: 5vh;
   -webkit-text-stroke: 0.5px whitesmoke;
-  transition: opacity 0.5s ease, font-size 0.5s ease;
   background: linear-gradient(to right, #808080, #d3d3d3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  overflow: hidden;
+  transition: opacity 0.5s ease, font-size 0.5s ease;
 }
 
 .first-letter {
@@ -52,25 +48,25 @@
   -webkit-text-fill-color: transparent;
 }
 
+.header.sticky {
+  background-color: #012448;
+  padding: 10px 0;
+}
+
 .header.sticky .logo-text {
   opacity: 0;
   font-size: 0;
-  padding: 0;
-  overflow-x: hidden;
 }
 
-.header.sticky {
-  padding: 10px 0; /* Ensure no horizontal padding */
-  width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
+.header.sticky .logo {
+  height: 8vw;
 }
 
 .navbar-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Ensure navbar links occupy full width */
+  width: 100%;
 }
 
 .navbar-links a {
@@ -92,16 +88,6 @@
   border-radius: 5px;
 }
 
-.header.sticky {
-  background-color: #012448;
-  padding: 10px 10px;
-  width: 100%; /* Ensure sticky header occupies full width */
-}
-
-.header.sticky .logo {
-  height: 15vw !important;
-}
-
 .icon {
   font-size: 1.4vw;
   margin-right: 5px;
@@ -114,7 +100,6 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
-  z-index: 10000;
   padding-bottom: 15px;
 }
 
@@ -129,10 +114,8 @@
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
-    width: 100%;
     flex-direction: column;
     text-align: center;
-    align-items: center;
   }
 
   .navbar-links.active {
@@ -141,24 +124,18 @@
 
   .logo {
     height: 22vw;
-    margin: 0;
   }
 
   .icon {
     font-size: 2vh;
-    padding-bottom: 1px;
-    margin-right: 0px;
-    align-items: flex-start;
   }
 
   .logo-text {
-    margin: 0;
     font-size: 3vh;
   }
 
   .navbar-links a {
     font-size: 3vw;
-    align-items: flex-start;
   }
 
   .hamburger {

@@ -58,16 +58,6 @@
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .box-align {
-        width: 100%;
-    }
-
-    .imgs img {
-        width: 80vw;
-    }
-}
-
 .smartphone {
     border: 5px solid #d3d3d3;
     border-radius: 20px;
@@ -100,10 +90,6 @@
 
 .round-btn:hover {
     background-color: #acaaaa;
-    width: 3vw;
-    height: 3vw;
-    border-radius: 20px;
-    margin-bottom: 5vh;
     cursor: pointer;
 }
 
@@ -113,7 +99,7 @@
     }
 
     .box-align {
-        width: 90%; /* Adjusted to fit better on mobile screens */
+        width: 90%;
     }
 
     .imgs {
@@ -121,13 +107,13 @@
     }
 
     .imgs img {
-        width: 15vw; /* Adjust image width for better fit on mobile */
-        margin: 10px; /* Add vertical spacing between images */
+        width: 15vw;
+        margin: 10px;
     }
 
     .p-adjust {
-        width: 90%; /* Ensures text takes up more screen space */
-        font-size: 1rem; /* Slightly smaller font size for readability */
+        width: 90%;
+        font-size: 1rem;
         width: 90%;
         max-height: 110px;
         overflow-y: auto;
@@ -135,13 +121,13 @@
     }
 
     .title-component {
-        font-size: 1.5rem; /* Slightly smaller title font size */
+        font-size: 1.5rem;
         margin-bottom: 20px;
     }
 
     .h3-align {
-        font-size: 1rem; /* Adjusted font size */
-        margin-top: 5vh; /* Reduced margin-top for better spacing */
+        font-size: 1rem;
+        margin-top: 5vh;
     }
 
     .round-btn {
