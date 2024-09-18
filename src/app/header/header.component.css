@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   margin: 0 auto;
 }
@@ -101,6 +102,18 @@
   flex-direction: column;
   cursor: pointer;
   padding-bottom: 15px;
+  margin-left: auto;
+}
+
+.header .hamburger {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+
+.header.sticky .hamburger {
+  top:18px;
 }
 
 .hamburger span {
@@ -132,6 +145,7 @@
 
   .logo-text {
     font-size: 3vh;
+    text-align: left;
   }
 
   .navbar-links a {
