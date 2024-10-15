@@ -1,66 +1,57 @@
-.container {
+.systems {
   text-align: center;
-  padding: 50px 0;
-  background-color: #000000;
+  background-color: #000000; 
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
 }
 
-.p-adjust {
-  font-size: 1.2rem;
-}
-
-.flex-align {
+.systems__align {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 90%;
 }
 
-.img {
-  margin-left: 30px;
+.systems__image {
+  margin-left: 3rem;
   width: 45vw;
   height: auto;
 }
 
-.stacked-text {
+.systems__stacked-text {
   text-align: left;
   margin-top: 0;
+  margin-left: 5rem;
 }
 
-.title-component {
+.systems__title {
   color: #00aaff;
   font-size: 2.5rem;
 }
 
-.paragraph-component {
+.systems__paragraph {
   font-size: 1.3rem;
   line-height: 1.6;
   width: 90%;
+  hyphens: auto;
 }
 
-.terminal-dash {
+.systems__terminal-dash {
   display: inline-block;
-  width: 10px;
-  height: 25px;
+  width: 1rem;
+  height: 2.5rem;
   background-color: #00aaff;
   animation: dash-in-out 1s infinite alternate;
 }
 
-.separator {
-  height: 2px;
-  background-color: black;
-  width: 80%;
-}
-
-.display-input {
-  display: flex;
+.systems__separator {
+  height: 1rem;
 }
 
 input {
   height: 4vh;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   background-color: #292929;
   color: white;
   border: 0;
@@ -114,55 +105,55 @@ h3 {
   }
 }
 
-.typing-text {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.typed-word {
-  opacity: 0;
-}
-
 @media (max-width: 768px) {
-  .flex-align {
+  .systems__align {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
   }
 
-  .img {
+  .systems__image {
     margin-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     width: 80vw;
+    padding-top: 1rem;
   }
 
-  .title-component {
+  .systems__title {
     font-size: 2rem;
     text-align: center;
-  }
-
-  .paragraph-component {
-    font-size: 1rem;
+    margin: 0 auto;
     width: 100%;
-    max-height: 110px;
+    padding-bottom: 1rem;
+  }
+
+  .systems__paragraph {
+    font-size: 1rem;
+    width: 90%;
+    max-height: 10rem;
     overflow-y: auto;
+    margin: 0 auto;
   }
 
-  .terminal-dash {
-    height: 18px;
+  .systems__terminal-dash {
+    height: 1.8rem;
   }
 
-  .stacked-text {
+  .systems__stacked-text {
     text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    margin: 0 auto;
   }
 
   h3 {
     font-size: 1rem;
     text-align: center;
-  }
-
-  .separator {
-    height: 1px !important;
-    margin: 20px auto !important;
-    padding: 0;
-    border: none;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 1rem;
   }
 }

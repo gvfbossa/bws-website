@@ -32,9 +32,9 @@ export class HeaderComponent {
     const header = document.querySelector('.header');
     if (header) {
       if (window.scrollY > 0) {
-        header.classList.add('sticky');
+        header.classList.add('header--sticky');
       } else {
-        header.classList.remove('sticky');
+        header.classList.remove('header--sticky');
       }
     }
   }
@@ -43,12 +43,12 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.menuActive = !this.menuActive;
-    const navbarLinks = document.querySelector('.navbar-links');
+    const navbarLinks = document.querySelector('.header__navbar-links');
     if (navbarLinks) {
       if (this.menuActive) {
-        navbarLinks.classList.add('active');
+        navbarLinks.classList.add('header__navbar-links--active');
       } else {
-        navbarLinks.classList.remove('active');
+        navbarLinks.classList.remove('header__navbar-links--active');
         !this.menuActive
       }
     }
@@ -56,9 +56,9 @@ export class HeaderComponent {
 
   closeMenu() {
     this.menuActive = false;
-    const navbarLinks = document.querySelector('.navbar-links');
+    const navbarLinks = document.querySelector('.header__navbar-links');
     if (navbarLinks) {
-      navbarLinks.classList.remove('active');
+      navbarLinks.classList.remove('header__navbar-links--active');
     }
   }
 }

@@ -1,0 +1,6 @@
+2024-10-04 18:31:08.774 [info] Activation> Extension version: 0.98.0
+2024-10-04 18:31:08.774 [info] TemporaryState> Error in initialization: Unable to delete nonexistent file 'vscode-userdata:/home/gvfbossa/Bossa Web Solutions/bws-site/bws-website/User/globalStorage/github.vscode-pull-request-github/temp'
+2024-10-04 18:31:08.844 [info] Looking for git repository
+2024-10-04 18:31:08.844 [info] Found 0 repositories during activation
+2024-10-04 18:31:08.844 [info] Git repository found, initializing review manager and pr tree view.
+2024-10-04 18:31:08.845 [info] Registering git provider

@@ -1,31 +1,31 @@
 <header class="header" id="header">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img class="logo" src="assets/images/header_bws_logo.png" alt="Bossa Web Solutions"/>
-      <span class="logo-text">
-        <b class="first-letter">B</b>OSSA <b class="first-letter">W</b>EB <b class="first-letter">S</b>OLUTIONS
+  <div class="header__container">
+    <a class="header__navbar-brand" href="#">
+      <img class="header__logo" src="assets/images/header_bws_logo.png" alt="Bossa Web Solutions"/>
+      <span class="header__logo-text">
+        <b class="header__logo-text--first-letter">B</b>OSSA <b class="header__logo-text--first-letter">W</b>EB <b class="header__logo-text--first-letter">S</b>OLUTIONS
       </span>
     </a>
-    <div class="hamburger" (click)="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="header__hamburger" (click)="toggleMenu()">
+      <span class="header__hamburger-span"></span>
+      <span class="header__hamburger-span"></span>
+      <span class="header__hamburger-span"></span>
     </div>
-    <div class="navbar-links" [class.active]="menuActive">
-      <a (click)="scrollTo('about')">
-        <mat-icon class="icon">info</mat-icon> Sobre
+    <div class="header__navbar-links" [class.header__navbar-links--active]="menuActive">
+      <a class="header__navbar-link" (click)="scrollTo('about')">
+        <mat-icon class="header__icon">info</mat-icon> SOBRE
       </a>
-      <a (click)="scrollTo('sites')">
-        <mat-icon class="icon">public</mat-icon> Sites
+      <a class="header__navbar-link" (click)="scrollTo('sites')">
+        <mat-icon class="header__icon">public</mat-icon> SITES
       </a> 
-      <a (click)="scrollTo('systems')">
-        <mat-icon class="icon">desktop_windows</mat-icon> Sistemas
+      <a class="header__navbar-link" (click)="scrollTo('systems')">
+        <mat-icon class="header__icon">desktop_windows</mat-icon> SISTEMAS
       </a>
-      <a (click)="scrollTo('apps')">
-        <mat-icon class="icon">smartphone</mat-icon> Apps
+      <a class="header__navbar-link" (click)="scrollTo('apps')">
+        <mat-icon class="header__icon">smartphone</mat-icon> APPS
       </a>
-      <a (click)="scrollTo('contact')">
-        <mat-icon class="icon">email</mat-icon> Contato
+      <a class="header__navbar-link" (click)="scrollTo('contact')">
+        <mat-icon class="header__icon">email</mat-icon> CONTATO
       </a>
     </div>
   </div>

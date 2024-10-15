@@ -9,7 +9,14 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  
+}
+
+.title-component {
+  color: #00aaff;
+  font-size: 2.5rem;
+  margin-top: 5vw;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .contact-section {
@@ -18,62 +25,72 @@
   margin-top: 65px;
   margin-bottom: 260px;
   margin-right: 25px;
+
+  &__text-container {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  &__adjust-content {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+  }
+}
+
+h4 {
+  color: white;
+  font-size: 1.2rem;
 }
 
 .container {
   margin-left: 3vw;
   align-items: center;
   margin: 0;
-}
 
-.text-container .title-component {
-  color: #00aaff;
-  font-size: 2.5rem;
-  margin-top: 5vw;
-  margin-bottom: 20px;
-  font-weight: bold;
+  &__form-section {
+    margin-bottom: 50px;
+  }
 }
 
 .form-group {
   margin-bottom: 5px;
   margin-top: 0px;
+
+  label {
+    color: white;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="phone"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #00aaff;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+
+  .form-group__error-message {
+    color: red;
+    display: block;
+  }
 }
 
-label {
-  color: white;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="phone"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1.5px solid #00aaff;
-  border-radius: 5px;
-  background-color: black;
-  color: white;
-}
-
-button[type="submit"] {
+.button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   background-color: #012448;
   color: white;
   cursor: pointer;
-}
 
-button[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-.text-danger {
-  color: red;
-}
-
-.btn {
-  cursor: pointer;
+  &:hover {
+    background-color: #0056b3;
+  }
 }
 
 .whatsapp {
@@ -85,29 +102,18 @@ button[type="submit"]:hover {
   white-space: nowrap;
 }
 
-.form-section {
-  margin-bottom: 50px;
-}
-
 .whatsapp-link {
   color: white;
   text-decoration: none;
   transition: color 0.3s;
+
+  &:hover {
+    background-color: #012448;
+    border-radius: 5px;
+  }
 }
 
-.whatsapp-link:hover {
-  background-color: #012448;
-  border-radius: 5px;
-}
-
-.contact-section .text-container .adjust-content {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  padding: 5px;
-}
-
-.mat-icon-style {
+.mat-icon {
   color: #00aaff;
 }
 
@@ -116,28 +122,33 @@ button[type="submit"]:hover {
     display: block;
   }
 
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
   .wrapper {
     display: block;
     margin-bottom: 10vh;
   }
   
   .contact-section {
-    width: 100%;
     margin-top: 100px;
     margin-bottom: 20px;
     align-items: center;
     align-content: center;
     align-self: center;
-  }
 
-  .text-container {
-    order: 1;
-    width: 100%;
-    margin-bottom: 20px;
-    height: auto;
-    align-items: center;
-    align-content: center;
-    align-self: center;
+    &__text-container {
+      order: 1;
+      height: auto;
+      align-items: center;
+      align-content: center;
+      align-self: center;
+    }
   }
 
   .container {
@@ -149,15 +160,11 @@ button[type="submit"]:hover {
     padding-bottom: 0px;
   }
 
-  h3 {
-    font-size: 1rem;
-  }
-
-  .contact-section .text-container .title-component {
+  .contact-section__title-component {
     font-size: 1.5rem;
   }
 
-  .adjust-content {
+  .contact-section__adjust-content {
     font-size: 1.5rem;
   }
 

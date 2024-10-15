@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
   constructor(private renderer: Renderer2, private elRef: ElementRef) { }
 
   ngOnInit(): void {
-    const mainTopics = this.elRef.nativeElement.querySelectorAll('.main-topic');
+    const mainTopics = this.elRef.nativeElement.querySelectorAll('.about__main-topic');
 
     mainTopics.forEach((topic: HTMLElement) => {
       this.renderer.listen(topic, 'click', () => {
@@ -23,7 +23,7 @@ export class AboutComponent implements OnInit {
               otherSublist.classList.remove('show');
               otherSublist.style.paddingLeft = '0'; 
               
-              const otherIcon = otherTopic.querySelector('.icon-style') as HTMLElement;
+              const otherIcon = otherTopic.querySelector('.about__icon-style') as HTMLElement;
               if (otherIcon) {
                 otherIcon.classList.remove('expanded');
               }

@@ -5,7 +5,7 @@
     src: url(assets/fonts/aAtmospheric.otf) format("opentype");
 }
 
-body {
+body, html {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
