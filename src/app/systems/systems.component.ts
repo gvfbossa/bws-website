@@ -7,7 +7,7 @@ import { Component, OnInit, OnDestroy,  } from '@angular/core';
 })
 export class SystemsComponent implements OnInit, OnDestroy {
   words: string[] = [
-    'Troque o Complexo por Simplicidade',
+    'Transforme o Complexo em Simplicidade',
   ];
   currentWordIndex: number = 0;
   typingTimeout: any;
