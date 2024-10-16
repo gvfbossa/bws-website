@@ -20,7 +20,9 @@
 }
 
 .about__welcome-title {
-  animation: fadeIn 5s, glow 15s linear forwards;
+  animation: fadeIn 5s;
+  text-shadow: 0 0 0.2rem rgba(0, 170, 255, 1), 0 0 3.5px rgba(0, 170, 255, 0.8), 0 0 5px rgba(0, 170, 255, 0.6);
+  transition: text-shadow 3s ease-in-out;
   font-size: 2rem;
   margin-bottom: 5rem;
   font-family: 'aatmospheric', sans-serif;
