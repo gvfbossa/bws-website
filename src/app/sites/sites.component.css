@@ -169,8 +169,8 @@
     .sites__img {
         width: 80vw;
         height: auto;
-        margin: 0;
-        margin-bottom: 2rem;
+        margin-left: 1.9rem;
+        padding: 0;
     }
 
     .sites__flex-container {
