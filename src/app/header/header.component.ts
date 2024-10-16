@@ -12,11 +12,10 @@ export class HeaderComponent {
   scrollTo(elementId: string): void {
     const element = document.getElementById(elementId);
     if (element) {
-      let yOffset = -180; // Default offset for desktop
+      let yOffset = -180;
   
-      // Adjust the offset for mobile view
       if (window.innerWidth <= 768) {
-        yOffset = -300; // You can adjust this value to match your header's height on mobile
+        yOffset = -300;
       }
   
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
@@ -29,13 +28,15 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const header = document.querySelector('.header');
+    const header = document.getElementById('header');
     if (header) {
-      if (window.scrollY > 0) {
-        header.classList.add('header--sticky');
-      } else {
-        header.classList.remove('header--sticky');
-      }
+        if (window.scrollY > 0) {
+            header.classList.add('header--sticky');
+            header.style.position = 'fixed';
+        } else {
+            header.classList.remove('header--sticky');
+            header.style.position = 'relative';
+        }
     }
   }
 

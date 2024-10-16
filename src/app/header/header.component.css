@@ -1,6 +1,7 @@
 /* HEADER */
 .header {
   position: sticky;
+  top: 0;
   z-index: 9999;
   transition: background-color 0.5s ease, padding 0.5s ease;
   background: rgba(0, 0, 0, 0);
@@ -9,7 +10,7 @@
 
 .header--sticky {
   background-color: #012448;
-  padding: 10px 0;
+  padding: 1rem 0;
 }
 
 .header--sticky .header__logo-text {
@@ -40,10 +41,10 @@
 /* LOGO */
 .header__logo {
   height: 6vw;
-  margin-right: 10px;
+  margin-right: 1rem;
   transition: height 0.5s ease;
-  min-width: 50px;
-  min-height: 50px;
+  min-width: 5rem;
+  min-height: 5rem;
 }
 
 .header__logo-text {
@@ -67,22 +68,22 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
-  padding-bottom: 15px;
   position: absolute;
-  right: 10px;
-  top: 40px;
+  right: 0.5rem;
+  top: 2rem;
 }
 
 .header--sticky .header__hamburger {
-  top: 18px;
+  top: 1.8rem;
 }
 
 .header__hamburger-span {
-  height: 3px;
-  width: 25px;
-  background-color: #fff;
-  margin: 4px;
-  border-radius: 5px;
+  height: 0.2rem;
+  width: 2.3rem;
+  background-color: white;
+  margin: 0.4rem;
+  border-radius: 0.5rem;
+  border: 1px solid #012448;
 }
 
 /* NAVBAR-LINKS */
@@ -112,7 +113,7 @@
 
 .header__navbar-link:hover {
   background-color: #2c2c2c;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 /* ICON */
@@ -131,6 +132,10 @@
     overflow: hidden;
   }
 
+  .header--sticky {
+    width: 100%;
+  }
+
   .header__navbar-links {
     display: none;
     flex-direction: column;
@@ -142,7 +147,16 @@
 
   .header__logo {
     height: 20vw;
-    width: 40vw;
+    width: 50vw;
+    padding-right: 0;
+    margin-right: 0;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .header--sticky .header__logo {
+    height: 20vw;
+    width: 30vw;
   }
 
   .header__icon {
@@ -152,6 +166,7 @@
   .header__logo-text {
     font-size: 3vh;
     text-align: left;
+    margin-right: 1rem;
   }
 
   .header__navbar-link {

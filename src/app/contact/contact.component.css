@@ -8,35 +8,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-}
-
-.title-component {
-  color: #00aaff;
-  font-size: 2.5rem;
-  margin-top: 5vw;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-.contact-section {
-  width: 100%;
-  text-align: center;
-  margin-top: 65px;
-  margin-bottom: 260px;
-  margin-right: 25px;
-
-  &__text-container {
-    margin-bottom: 20px;
-    width: 100%;
-  }
-
-  &__adjust-content {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding: 5px;
-  }
+  max-height: 85rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 h4 {
@@ -44,77 +18,110 @@ h4 {
   font-size: 1.2rem;
 }
 
-.container {
+.contact-section {
+  width: 100%;
+  text-align: center;
+  margin-top: 7rem;
+  margin-bottom: 26rem;
+  margin-left: -15%;
+}
+
+.form-section {
   margin-left: 3vw;
   align-items: center;
   margin: 0;
-
-  &__form-section {
-    margin-bottom: 50px;
-  }
 }
 
-.form-group {
-  margin-bottom: 5px;
-  margin-top: 0px;
-
-  label {
-    color: white;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="phone"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1.5px solid #00aaff;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-  }
-
-  .form-group__error-message {
-    color: red;
-    display: block;
-  }
+.contact-section__text-container .contact-section__title {
+  color: #00aaff;
+  font-size: 2.5rem;
+  margin-top: 5vw;
+  margin-bottom: 2rem;
+  font-weight: bold;
 }
 
-.button {
-  padding: 10px 20px;
-  border: none;
+.form-section__group {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+label {
+  color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 0.15rem solid #00aaff;
   border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+
+button[type="submit"] {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
   background-color: #012448;
   color: white;
   cursor: pointer;
-
-  &:hover {
-    background-color: #0056b3;
-  }
 }
 
-.whatsapp {
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.form-section__error {
+  color: red;
+}
+
+.form-section__button {
+  cursor: pointer;
+}
+
+.contact-section__whatsapp {
   width: 2vw;
 }
 
-.text-container h3 {
+.contact-section__text-container h3 {
   margin: 0;
   white-space: nowrap;
 }
 
-.whatsapp-link {
+.form-section {
+  width: 25vw;
+}
+
+.form-section__form {
+  margin-bottom: 5rem;
+}
+
+.contact-section__whatsapp-link {
   color: white;
   text-decoration: none;
   transition: color 0.3s;
-
-  &:hover {
-    background-color: #012448;
-    border-radius: 5px;
-  }
 }
 
-.mat-icon {
+.contact-section__whatsapp-link:hover {
+  background-color: #012448;
+  border-radius: 0.5rem;
+}
+
+.contact-section .contact-section__text-container .contact-section__adjust-content {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.contact-section__mat-icon {
   color: #00aaff;
+  font-size: 2vw;
+  padding-right: 0.7rem;
+  padding-bottom: 0.6rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -124,52 +131,64 @@ h4 {
 
   h3 {
     font-size: 1.2rem;
+    margin: 0;
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 1.0rem;
+    margin: 1rem;
   }
 
   .wrapper {
     display: block;
     margin-bottom: 10vh;
+    margin-top: -10%;
   }
   
   .contact-section {
-    margin-top: 100px;
-    margin-bottom: 20px;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-
-    &__text-container {
-      order: 1;
-      height: auto;
-      align-items: center;
-      align-content: center;
-      align-self: center;
-    }
+    width: 100%;
+    margin-top: 10rem;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 
-  .container {
-    order: 2;
+  .contact-section__text-container {
+    order: 1;
     width: 100%;
-    margin-bottom: 0px;
-    margin-left: 0px;
+    margin-bottom: 1rem;
     height: auto;
-    padding-bottom: 0px;
-  } /* TODO - arrumar essa porra aqui */
+  }
 
-  .contact-section__title-component {
+  .form-section {
+    order: 2;
+    width: 80%;
+    max-width: 20rem;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    padding-right: 2rem;
+  }
+
+  .contact-section .contact-section__text-container .contact-section__title {
     font-size: 1.5rem;
   }
 
   .contact-section__adjust-content {
     font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -4%;
+
   }
 
-  .whatsapp {
-    height: 25px;
-    width: 25px;
+  .contact-section__whatsapp {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  .contact-section__mat-icon {
+    font-size: 6vw;
+    padding-top: 3vw;
+    padding-right: 0.1rem;
   }
 }

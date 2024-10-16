@@ -4,6 +4,9 @@
     width: 55vw;
     margin: 1rem auto;
     overflow: hidden;
+    height: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .smartphone__screen {
@@ -98,6 +101,10 @@
         border-width: 0.2rem;
     }
 
+    .smartphone__screen {
+        padding: 0.3rem;
+    }
+
     .smartphone__box-align {
         width: 90%;
         border-width: 0.4rem;
@@ -136,6 +143,7 @@
     .smartphone__round-btn {
         width: 8vw;
         height: 8vw;
+        margin-bottom: 0;
     }
 
     .smartphone__round-btn:hover {

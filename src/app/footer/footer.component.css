@@ -1,17 +1,11 @@
 .footer {
-    background-color: #012448; /* Add background color */
-    color: #ffffff; /* Set text color to white */
-    padding: 20px; /* Increase padding for better spacing */
-    text-align: center; /* Center-align text */
-    margin-top: 0; /* Reduced top margin to bring footer closer */
+    background-color: #012448;
+    color: #ffffff;
+    padding: 2.5rem;
+    text-align: center;
+    margin-top: 0;
   }
-  
-  .container span {
-    display: block; /* Display spans as block elements for better spacing */
-    margin-bottom: 10px; /* Add spacing between spans */
-    font-size: 14px; /* Adjust font size */
-  }
-  
-  .container span:first-child {
-    font-weight: bold; /* Make the first span bold */
+
+  .footer__container-span {
+    font-size: 1rem;
   }
