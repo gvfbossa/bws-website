@@ -39,15 +39,14 @@
 }
 
 .smartphone__image {
-    width: 15vw;
-    max-width: 20rem;
+    width: 10vw;
     border-radius: 1.5rem;
     margin: 0 1.5rem;
     transition: transform 0.3s ease;
 }
 
 .smartphone__image:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -108,10 +107,11 @@
     .smartphone__box-align {
         width: 90%;
         border-width: 0.4rem;
+        padding-top: 0;
     }
 
     .smartphone__image-container {
-        padding-right: 1.8rem;
+        padding-right: 1.9rem;
     }
 
     .smartphone__image {
@@ -125,19 +125,22 @@
         font-size: 1rem;
         max-height: 10rem;
         overflow-y: auto;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         hyphens: auto;
     }
 
     .smartphone__title {
         font-size: 1.5rem;
+        max-height: 1.5rem;
+        width: auto;
+        left: -150%;
         margin-bottom: 2rem;
-        padding-right: 1.2rem;
+        margin-left: -1.8rem;
     }
 
     .smartphone__h3 {
         font-size: 1rem;
-        margin-top: 5vh;
+        margin-top: 1vh;
     }
 
     .smartphone__round-btn {

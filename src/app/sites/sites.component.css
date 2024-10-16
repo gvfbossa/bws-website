@@ -152,6 +152,10 @@
         font-size: 1.6rem;
     }
 
+    .sites__menu {
+        padding-bottom: 1.5rem;
+    }
+
     .sites__menu-item,
     .sites__menu-dash {
         font-size: 1rem;
@@ -195,6 +199,8 @@
 
     .sites__paragraph-container {
         align-items: center;
+        margin-left: 1rem;
+        margin-right: 0.5rem;
     }
 
     .sites__paragraph {
@@ -226,6 +232,7 @@
         background-color: #0c0c0c;
         text-align: center;
         margin: 0 auto;
+        hyphens: none;
     }
 
     .sites__visual-content {
