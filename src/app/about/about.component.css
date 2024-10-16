@@ -20,11 +20,10 @@
 }
 
 .about__welcome-title {
-  animation: fadeIn 5s, glow 5s linear forwards;
+  animation: fadeIn 5s, glow 15s linear forwards;
   font-size: 2rem;
   margin-bottom: 5rem;
   font-family: 'aatmospheric', sans-serif;
-  will-change: fadeIn, glow;
 }
 
 .about__welcome-image {
