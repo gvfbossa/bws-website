@@ -74,14 +74,14 @@
 }
 
 .header--sticky .header__hamburger {
-  top: 1.8rem;
+  top: 1.9rem;
 }
 
 .header__hamburger-span {
   height: 0.2rem;
-  width: 2.3rem;
+  width: 2rem;
   background-color: white;
-  margin: 0.4rem;
+  margin: 0.3rem;
   border-radius: 0.5rem;
   border: 1px solid #012448;
 }

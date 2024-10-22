@@ -63,9 +63,9 @@ export class HeaderComponent {
     }
   }
   
+  //TODO - dar um jeito de aplicar o scroll/calculate no início/load inicial da página, para que o scroll funcione de cara
   //TODO - borda de cor diferente no logo, para aparecer mais quando as palavras estiverem em cima dos ladrilhos
   //TODO - imagens - mexer nos tamanhos dos arquivos para carregamento mais rápido
-  //TODO - ao clicar no link do email, não está preenchendo o e-mail do bossa.....
   //TODO - Deploy do Backend para enviar os emails
 
   //TODO - cartão/flyer redes sociais - cartão terá QR code que leva o usuario direto pro WhatsApp
