@@ -62,18 +62,6 @@ export class HeaderComponent {
       }
     }
   }
-  
-  //TODO - dar um jeito de aplicar o scroll/calculate no início/load inicial da página, para que o scroll funcione de cara
-  //TODO - borda de cor diferente no logo, para aparecer mais quando as palavras estiverem em cima dos ladrilhos
-  //TODO - imagens - mexer nos tamanhos dos arquivos para carregamento mais rápido
-  //TODO - Deploy do Backend para enviar os emails
-
-  //TODO - cartão/flyer redes sociais - cartão terá QR code que leva o usuario direto pro WhatsApp
-  
-  //TODO - V2 - demonstrar ao usuário a interatividade com o site por meio de efeitos que o leve a clicar nas coisas
-  //TODO - V2 - Criar área do cliente para o mesmo interagir com pagamentos, status de seus pedidos, etc
-  //TODO - V2 - Criar app baseado no site em flutter para demonstração
-  //TODO - V2 - Criar seção de portfolio
 
   toggleMenu() {
     this.menuActive = !this.menuActive;
