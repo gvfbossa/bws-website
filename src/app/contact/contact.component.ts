@@ -29,9 +29,9 @@ export class ContactComponent {
           (messageControl.value && messageControl.value.length < 20)) {
         return;
       }
-
+      
       this.submitting = true;
-
+      
       const formData = {
         name: contactForm.value.name,
         email: contactForm.value.email,
@@ -47,6 +47,7 @@ export class ContactComponent {
           this.scrollToBottom();
         },
         error => {
+          console.log('Erro do servidor: ' + error.message)
           this.submitting = false;
           this.openSnackBar('Ocorreu um erro =(', 'X', 'error');
           this.scrollToBottom();

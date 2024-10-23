@@ -57,7 +57,8 @@
                     Mensagem deve conter pelo menos 20 caracteres
                 </div>
             </div>
-            <button type="submit" class="form-section__button">Enviar</button>
+            <button type="submit" class="form-section__button" [disabled]="submitting">Enviar</button>
         </form>
+        <app-spinner [isLoading]="submitting"></app-spinner>
     </div>
 </div>

@@ -11,7 +11,7 @@ export class ContactService {
 
   submitForm(formData: any): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<any>('http://localhost:8080/submitForm', JSON.stringify(formData), { headers });
+    return this.http.post<any>('http://localhost:8080/api/sendEmail', JSON.stringify(formData), { headers });
   }
   
 }
