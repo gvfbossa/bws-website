@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener } from '@angular/core'
 
 @Component({
   selector: 'app-header',
@@ -6,22 +6,22 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  headerHeight: number = 0;
-  componentPositions: { [key: string]: number } = {};
-  menuActive: boolean = false;
+  headerHeight: number = 0
+  componentPositions: { [key: string]: number } = {}
+  menuActive: boolean = false
 
   constructor() {}
 
   measureComponents(): void {
-    const header = document.getElementById('header');
-    this.headerHeight = header ? header.offsetHeight : 0;
+    const header = document.getElementById('header')
+    this.headerHeight = header ? header.offsetHeight : 0
     
-    const components = ['about', 'sites', 'systems', 'apps', 'contact', 'footer'];
+    const components = ['about', 'sites', 'systems', 'apps', 'contact', 'footer']
     
     components.forEach(id => {
-      const element = document.getElementById(id);
+      const element = document.getElementById(id)
       if (element && element.offsetParent !== null) {
-        let offsetTop = element.getBoundingClientRect().top + window.scrollY;
+        let offsetTop = element.getBoundingClientRect().top + window.scrollY
 
         if (window.innerWidth > 768) {
           if (id === 'contact') {
@@ -32,55 +32,55 @@ export class HeaderComponent {
           }
         }
 
-        this.componentPositions[id] = offsetTop;
+        this.componentPositions[id] = offsetTop
       }
-    });
+    })
   }
   
   scrollTo(sectionId: string): void {
-    let elementPosition = this.componentPositions[sectionId] - this.headerHeight;
+    let elementPosition = this.componentPositions[sectionId] - this.headerHeight
 
     window.scrollTo({
       top: elementPosition,
       behavior: 'smooth'
-    });
+    })
 
-    this.closeMenu();
+    this.closeMenu()
   }  
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.measureComponents();
-    const header = document.getElementById('header');
+    this.measureComponents()
+    const header = document.getElementById('header')
     if (header) {
       if (window.scrollY > 0) {
-        header.classList.add('header--sticky');
-        header.style.position = 'fixed';    
+        header.classList.add('header--sticky')
+        header.style.position = 'fixed'    
       } else {
-        header.classList.remove('header--sticky');
-        header.style.position = 'relative';
+        header.classList.remove('header--sticky')
+        header.style.position = 'relative'
       }
     }
   }
 
   toggleMenu() {
-    this.menuActive = !this.menuActive;
-    const navbarLinks = document.querySelector('.header__navbar-links');
+    this.menuActive = !this.menuActive
+    const navbarLinks = document.querySelector('.header__navbar-links')
     if (navbarLinks) {
       if (this.menuActive) {
-        navbarLinks.classList.add('header__navbar-links--active');
+        navbarLinks.classList.add('header__navbar-links--active')
       } else {
-        navbarLinks.classList.remove('header__navbar-links--active');
+        navbarLinks.classList.remove('header__navbar-links--active')
         !this.menuActive
       }
     }
   }
 
   closeMenu() {
-    this.menuActive = false;
-    const navbarLinks = document.querySelector('.header__navbar-links');
+    this.menuActive = false
+    const navbarLinks = document.querySelector('.header__navbar-links')
     if (navbarLinks) {
-      navbarLinks.classList.remove('header__navbar-links--active');
+      navbarLinks.classList.remove('header__navbar-links--active')
     }
   }
 }
