@@ -1,0 +1,32 @@
+<header class="header" id="header">
+  <div class="header__container">
+    <a class="header__navbar-brand" href="#">
+      <img class="header__logo" src="assets/images/header_bws_logo.png" alt="Bossa Web Solutions"/>
+      <span class="header__logo-text">
+        <b class="header__logo-text--first-letter">B</b>OSSA <b class="header__logo-text--first-letter">W</b>EB <b class="header__logo-text--first-letter">S</b>OLUTIONS
+      </span>
+    </a>
+    <div class="header__hamburger" (click)="toggleMenu()">
+      <span class="header__hamburger-span"></span>
+      <span class="header__hamburger-span"></span>
+      <span class="header__hamburger-span"></span>
+    </div>
+    <div class="header__navbar-links" [class.header__navbar-links--active]="menuActive">
+      <a class="header__navbar-link" (click)="scrollTo('about')">
+        <mat-icon class="header__icon">info</mat-icon> SOBRE
+      </a>
+      <a class="header__navbar-link" (click)="scrollTo('sites')">
+        <mat-icon class="header__icon">public</mat-icon> SITES
+      </a> 
+      <a class="header__navbar-link" (click)="scrollTo('systems')">
+        <mat-icon class="header__icon">desktop_windows</mat-icon> SISTEMAS
+      </a>
+      <a class="header__navbar-link" (click)="scrollTo('apps')">
+        <mat-icon class="header__icon">smartphone</mat-icon> APPS
+      </a>
+      <a class="header__navbar-link" (click)="scrollTo('contact')">
+        <mat-icon class="header__icon">email</mat-icon> CONTATO
+      </a>
+    </div>
+  </div>
+</header>

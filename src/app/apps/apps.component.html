@@ -1,0 +1,35 @@
+<div class="smartphone" id="apps">
+  <div class="smartphone__screen">
+    <div class="smartphone__container">
+      <div class="smartphone__box-align">
+        <h1 class="smartphone__title">APPS</h1> 
+        <div class="smartphone__image-container" id="imageContainer">
+          <img class="smartphone__image smartphone__image--app1"
+            src="{{img1Show ? '/assets/images/app_app1.png' : '/assets/images/app_app1_alt.png' }}" 
+            alt="App 1"
+            (click)="toggleImg1()"
+            onkeydown="toggleImg()"/>
+          <img class="smartphone__image smartphone__image--app2" 
+            src="{{img2Show ? '/assets/images/app_app2.png' : '/assets/images/app_app2_alt.png' }}" 
+            alt="App 2"
+            (click)="toggleImg2()"
+            onkeydown="toggleImg()"/>
+          <img class="smartphone__image smartphone__image--app3" 
+            src="{{img3Show ? '/assets/images/app_app3.png' : '/assets/images/app_app3_alt.png' }}" 
+            alt="App 3"
+            (click)="toggleImg3()"
+            onkeydown="toggleImg()"/>
+        </div>
+      </div>
+      <h3 class="smartphone__h3">A solução para seu negócio, na palma da sua mão</h3>
+      <p class="smartphone__paragraph">
+        Transformamos a visão da sua empresa em realidade, colocando a solução ao alcance de todos. 
+        Com nossos aplicativos móveis personalizados (<b class="smartphone__bold-text">Android</b> e <b class="smartphone__bold-text">iOS</b>), oferecemos uma experiência intuitiva e eficiente. 
+        Desenvolvemos aplicativos sob medida para atender às suas necessidades exclusivas. 
+        De gerenciamento de tarefas a interação com clientes, levamos sua empresa para o próximo nível. 
+        Simplificamos a complexidade e colocamos o poder da tecnologia em suas mãos.<br><br><br>
+      </p>
+      <div class="smartphone__round-btn" (click)="resetImgs()" onkeydown="resetImgs()"></div>
+    </div>
+  </div>
+</div>

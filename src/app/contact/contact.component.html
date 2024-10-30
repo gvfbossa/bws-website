@@ -1,0 +1,64 @@
+<div class="wrapper" id="contact">
+    <div class="contact-section">
+        <div class="contact-section__text-container">
+            <h1 class="contact-section__title">CONTATO</h1>
+            <h3>Solicite seu orçamento conosco<br></h3>   
+            <h4>Clique nos links abaixo ou preencha o formulário<br><br></h4>
+            <div class="contact-section__adjust-content">
+                <img class="contact-section__whatsapp" src="assets/images/contact_whatsapp.png" alt="WhatsApp Bossa Web Solutions"/>
+                <h3>
+                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=5511953468808" class="contact-section__whatsapp-link">
+                        &nbsp;(11) 95346-8808
+                    </a>
+                    <br>
+                </h3>
+            </div>
+            <div class="contact-section__adjust-content">
+                <mat-icon class="contact-section__mat-icon">email</mat-icon>
+                <h3>
+                    <a href="mailto:contato@bossawebsolutions.com.br" class="contact-section__whatsapp-link">
+                        &nbsp;contato&#64;bossawebsolutions.com.br
+                    </a> 
+                </h3>  
+            </div>  
+        </div>
+    </div>
+    <div class="form-section">
+        <form (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm" novalidate class="form-section__form">
+            <div class="form-section__group">
+                <label for="name">Nome</label>
+                <input type="text" class="form-section__input" id="name" name="name" required [minlength]="3"
+                (blur)="validateField('name', contactForm)" ngModel #name="ngModel">
+                <div *ngIf="name.invalid && name.touched" class="form-section__error">
+                    Nome deve conter pelo menos 3 caracteres
+                </div>
+            </div>
+            <div class="form-section__group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-section__input" id="email" name="email" required email
+                (blur)="validateField('email', contactForm)" ngModel #email="ngModel">
+                <div *ngIf="email.invalid && email.touched" class="form-section__error">
+                    Email deve estar no formato correto
+                </div>
+            </div>
+            <div class="form-section__group">
+                <label for="phone">Telefone</label>
+                <input type="text" class="form-section__input" id="phone" name="phone" required pattern="[0-9]{10,}"
+                (blur)="validateField('phone', contactForm)" ngModel #phone="ngModel">
+                <div *ngIf="phone.invalid && phone.touched" class="form-section__error">
+                    Telefone deve conter pelo menos 10 números
+                </div>
+            </div>
+            <div class="form-section__group">
+                <label for="message">Mensagem</label>
+                <textarea class="form-section__input" id="message" name="message" rows="5" required minlength="20"
+                (blur)="validateField('message', contactForm)" ngModel #message="ngModel"></textarea>
+                <div *ngIf="(message.invalid && message.touched) || message.value.length > 20" class="form-section__error">
+                    Mensagem deve conter pelo menos 20 caracteres
+                </div>
+            </div>
+            <button type="submit" class="form-section__button" [disabled]="submitting">Enviar</button>
+        </form>
+        <app-spinner [isLoading]="submitting"></app-spinner>
+    </div>
+</div>

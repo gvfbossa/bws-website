@@ -1,0 +1,43 @@
+<div class="computer-screen-background" id="sites">
+    <div class="sites">
+        <h1 class="sites__title" (click)="toggleOffContents()">SITES</h1>
+        <h3 class="sites__menu">
+            <span class="sites__menu-item" (click)="toggleWebsitesContent()">Sites personalizados</span>
+            <b class="sites__menu-dash">|</b>
+            <span class="sites__menu-item" (click)="toggleIdentityContent()">Sua identidade digital</span>
+        </h3>
+        <div class="sites__flex-align">
+            <img class="sites__img" src="assets/images/site_main.png" alt="Websites" />
+            <div class="sites__flex-container">
+                <p *ngIf="validateIfContents()" class="sites__interaction-message">
+                    Interaja com os menus desta seção
+                </p>
+                <p class="sites__visual-content" *ngIf="showWebsitesContent">
+                    Seu website, do seu jeito
+                </p>
+                <div class="sites__identity" *ngIf="showIdentityContent">
+                    <div class="sites__paragraph-container">
+                        <p class="sites__paragraph sites__additional-content">
+                            <mat-icon class="sites__icon">check_circle</mat-icon>Identidade digital forte
+                        </p>
+                        <p class="sites__paragraph sites__additional-content">
+                            <mat-icon class="sites__icon">check_circle</mat-icon>Destaque-se no mundo online
+                        </p>
+                        <p class="sites__paragraph sites__additional-content">
+                            <mat-icon class="sites__icon">check_circle</mat-icon>Deixe sua marca
+                        </p>
+                    </div>
+                    <img class="sites__img-digital" src="/assets/images/site_digital_fingerprint.png" alt="Identidade Digital" />
+                </div>
+                <p class="sites__paragraph">
+                    Construímos a ponte digital para o seu sucesso, com websites personalizados que se destacam.
+                    Nosso foco está em criar uma presença online única e memorável para sua marca.
+                    Com designs modernos e funcionais, garantimos uma experiência envolvente para seus visitantes.
+                    Do desenvolvimento à implementação, nossa equipe se dedica a atender suas necessidades.
+                    Conte conosco para transformar sua visão em realidade digital.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="separator"></div>

@@ -1,0 +1,177 @@
+/* SMARTPHONE CONTAINER */
+.smartphone {
+    border: 5px solid #d3d3d3;
+    border-radius: 2rem;
+    width: 55vw;
+    margin: 1rem auto;
+    overflow: hidden;
+    height: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* SMARTPHONE SCREEN */
+.smartphone__screen {
+    background-color: darkgray;
+    padding: 1rem;
+}
+
+/* SMARTPHONE CONTAINER INNER */
+.smartphone__container {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* BOX ALIGNMENT */
+.smartphone__box-align {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+/* IMAGE CONTAINER */
+.smartphone__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* APP IMAGES */
+.smartphone__image {
+    width: 10vw;
+    border-radius: 1.5rem;
+    margin: 0 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.smartphone__image:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* TITLE */
+.smartphone__title {
+    color: #00aaff;
+    font-size: 2.5rem;
+    margin-bottom: 7vh;
+    margin-top: 0;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* SUBTITLE */
+.smartphone__h3 {
+    margin-top: 10vh;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* BOLD TEXT */
+.smartphone__bold-text {
+    font-weight: bold;
+}
+
+/* PARAGRAPH */
+.smartphone__paragraph {
+    width: 90%;
+    text-align: justify;
+    margin: 0;
+    padding: 0 3vw 3vw 3vw;
+    font-size: 1.3rem;
+    hyphens: auto;
+}
+
+/* ROUND BUTTON */
+.smartphone__round-btn {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 2rem;
+    background-color: #d3d3d3;
+    margin-bottom: 5vh;
+    display: inline-block;
+}
+
+.smartphone__round-btn:hover {
+    background-color: #acaaaa;
+    cursor: pointer;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+    /* SMARTPHONE */
+    .smartphone {
+        width: 80%;
+        border-width: 0.2rem;
+    }
+
+    /* SMARTPHONE SCREEN */
+    .smartphone__screen {
+        padding: 0.3rem;
+    }
+
+    /* BOX ALIGNMENT */
+    .smartphone__box-align {
+        width: 90%;
+        border-width: 0.4rem;
+        padding-top: 0;
+    }
+
+    /* IMAGE CONTAINER */
+    .smartphone__image-container {
+        padding-right: 1.9rem;
+    }
+
+    /* APP IMAGES */
+    .smartphone__image {
+        width: 15vw;
+        margin: 1rem;
+        border-radius: 1rem;
+    }
+
+    /* PARAGRAPH */
+    .smartphone__paragraph {
+        width: 90%;
+        font-size: 1rem;
+        max-height: 10rem;
+        overflow-y: auto;
+        margin-bottom: 2rem;
+        hyphens: auto;
+    }
+
+    /* TITLE */
+    .smartphone__title {
+        font-size: 1.5rem;
+        max-height: 1.5rem;
+        width: auto;
+        left: -150%;
+        margin-bottom: 2rem;
+        margin-left: -1.8rem;
+    }
+
+    /* SUBTITLE */
+    .smartphone__h3 {
+        font-size: 1rem;
+        margin-top: 1vh;
+    }
+
+    /* ROUND BUTTON */
+    .smartphone__round-btn {
+        width: 8vw;
+        height: 8vw;
+        margin-bottom: 0;
+    }
+
+    .smartphone__round-btn:hover {
+        width: 8vw;
+        height: 8vw;
+    }
+}
