@@ -18,6 +18,9 @@ import { AboutComponent } from './about/about.component'
 import { HttpClientModule } from '@angular/common/http'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { SpinnerComponent } from './spinner/spinner.component'
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,8 @@ import { SpinnerComponent } from './spinner/spinner.component'
     BrowserAnimationsModule,
     HttpClientModule,
     MatProgressSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [
     provideClientHydration()
