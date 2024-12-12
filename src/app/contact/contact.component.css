@@ -28,7 +28,7 @@
 .contact-section {
   width: 100%;
   text-align: center;
-  margin-top: 7rem;
+  margin-top: 14rem;
   margin-bottom: 26rem;
   margin-left: -15%;
 }
@@ -110,15 +110,15 @@ button[type="submit"]:hover {
   margin-bottom: 5rem;
 }
 
-/* WHATSAPP LINK */
-.contact-section__whatsapp-link {
+/* CONTENT LINK */
+.contact-section__content-link {
   color: white;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-/* WHATSAPP LINK HOVER */
-.contact-section__whatsapp-link:hover {
+/* CONTENT LINK HOVER */
+.contact-section__content-link:hover {
   background-color: #012448;
   border-radius: 0.5rem;
 }
@@ -137,6 +137,15 @@ button[type="submit"]:hover {
   font-size: 2vw;
   padding-right: 0.7rem;
   padding-bottom: 0.6rem;
+}
+
+.contact-section__social-icon-fb {
+  margin-right: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section__adjust-content .contact-section__social-icon-insta {
+  height: 1.6rem;
 }
 
 /* MEDIA QUERY */
