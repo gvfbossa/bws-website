@@ -40,7 +40,7 @@
         </div>
     </div>
     <div class="form-section">
-        <form (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm" novalidate class="form-section__form">
+        <form (ngSubmit)="submitGoogleForm(contactForm)" #contactForm="ngForm" novalidate class="form-section__form">
             <div class="form-section__group">
                 <label for="name">Nome</label>
                 <input type="text" class="form-section__input" id="name" name="name" required [minlength]="3"
@@ -69,7 +69,7 @@
                 <label for="message">Mensagem</label>
                 <textarea class="form-section__input" id="message" name="message" rows="5" required minlength="20"
                 (blur)="validateField('message', contactForm)" ngModel #message="ngModel"></textarea>
-                <div *ngIf="(message.invalid && message.touched) || message.value.length > 20" class="form-section__error">
+                <div *ngIf="(message.invalid && message.touched) && message.value.length < 20" class="form-section__error">
                     Mensagem deve conter pelo menos 20 caracteres
                 </div>
             </div>

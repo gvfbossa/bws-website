@@ -14,6 +14,45 @@ export class ContactComponent {
 
   constructor(private snackBar: MatSnackBar, private contactService: ContactService) { }
 
+  submitGoogleForm(contactForm: NgForm) {
+    this.submitting = true
+
+    if (contactForm.valid) {
+      if (contactForm.controls['name'].invalid || 
+        contactForm.controls['email'].invalid || 
+        contactForm.controls['phone'].invalid || 
+        contactForm.controls['message'].invalid ||
+          !contactForm.controls['message'].touched ||
+          (contactForm.controls['message'].value && contactForm.controls['message'].value.length < 20)) {
+        return
+      }
+
+      const payload = {
+        'entry.1094832714': contactForm.controls['name'],
+        'entry.1350726970': contactForm.controls['email'],
+        'entry.1220112477': contactForm.controls['phone'],
+        'entry.424050408': contactForm.controls['message']
+      }
+      
+      this.submitting = true
+      
+      this.contactService.submitGoogleForm(payload).subscribe(
+        () => {
+          this.submitting = false
+          this.resetForm(contactForm)
+          this.openSnackBar('Agradecemos seu contato!', 'X', 'success')
+          this.scrollToBottom()
+        },
+        error => {
+          console.log('Erro do servidor: ' + error.message)
+          this.submitting = false
+          this.openSnackBar('Ocorreu um erro =(', 'X', 'error')
+          this.scrollToBottom()
+        }
+      )
+    }
+  }
+
   submitForm(contactForm: NgForm) {
     if (contactForm.valid) {
       const nameControl = contactForm.controls['name']
