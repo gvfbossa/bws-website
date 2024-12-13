@@ -38,61 +38,26 @@ export class ContactComponent {
       
       this.contactService.submitGoogleForm(payload).subscribe(
         () => {
-          this.submitting = false
-          this.resetForm(contactForm)
-          this.openSnackBar('Agradecemos seu contato!', 'X', 'success')
-          this.scrollToBottom()
+          console.log('pequeno suricato')
+          this.formSubmittedResult('Agradecemos seu contato!', 'success', contactForm)
         },
         error => {
-          console.log('Erro do servidor: ' + error.message)
-          this.submitting = false
-          this.openSnackBar('Ocorreu um erro =(', 'X', 'error')
-          this.scrollToBottom()
+          console.log('grande suricato de merda')
+          if (error.status === 200 || error.status === 0)
+            this.formSubmittedResult('Agradecemos seu contato!', 'success', contactForm)
+          else
+            this.formSubmittedResult('Ocorreu um erro =(', 'error', contactForm)
         }
       )
     }
   }
 
-  submitForm(contactForm: NgForm) {
-    if (contactForm.valid) {
-      const nameControl = contactForm.controls['name']
-      const emailControl = contactForm.controls['email']
-      const phoneControl = contactForm.controls['phone']
-      const messageControl = contactForm.controls['message']
-
-      if (nameControl.invalid || 
-          emailControl.invalid || 
-          phoneControl.invalid || 
-          messageControl.invalid ||
-          !messageControl.touched ||
-          (messageControl.value && messageControl.value.length < 20)) {
-        return
-      }
-      
-      this.submitting = true
-      
-      const formData = {
-        name: contactForm.value.name,
-        email: contactForm.value.email,
-        phone: contactForm.value.phone,
-        message: contactForm.value.message
-      }
-
-      this.contactService.submitForm(formData).subscribe(
-        () => {
-          this.submitting = false
-          this.resetForm(contactForm)
-          this.openSnackBar('Agradecemos seu contato!', 'X', 'success')
-          this.scrollToBottom()
-        },
-        error => {
-          console.log('Erro do servidor: ' + error.message)
-          this.submitting = false
-          this.openSnackBar('Ocorreu um erro =(', 'X', 'error')
-          this.scrollToBottom()
-        }
-      )
-    }
+  formSubmittedResult(message: string, type: string, contactForm: NgForm) {
+    this.submitting = false
+    this.openSnackBar(message, 'X', type)
+    this.scrollToBottom()
+    if (type === 'success')
+      this.resetForm(contactForm)
   }
 
   validateField(field: string, form: NgForm) {

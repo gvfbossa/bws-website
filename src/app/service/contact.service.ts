@@ -19,19 +19,12 @@ export class ContactService {
         }
     });
 
-    console.log('Payload ' + payload)
-
     return this.http.post(this.googleFormUrl, body.toString(), {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
         responseType: 'text',
     });
-  }
-
-  submitForm(formData: any): Observable<any> {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' })
-    return this.http.post<any>('https://bws-website-backend-1f2a0c7560ec.herokuapp.com/api/sendEmail', JSON.stringify(formData), { headers })
   }
   
 }
