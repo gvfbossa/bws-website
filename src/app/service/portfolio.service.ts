@@ -10,7 +10,7 @@ export class PortfolioService {
       description: 'Um portal de notícias completo e gerenciável com anúncios',
       images: ['assets/images/portfolio-portal1.png', 'assets/images/portfolio-portal2.png', 'assets/images/portfolio-portal3.png', 'assets/images/portfolio-portal4.png'],
       url: 'https://portfolio.portal-noticias.bossawebsolutions.com.br/',
-    }, /**
+    },/** 
     {
       title: 'Loja Virtual',
       description: 'Loja virtual para você entrar de vez no mundo online e expandir seu negócio',
