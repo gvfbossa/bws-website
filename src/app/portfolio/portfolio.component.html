@@ -1,0 +1,38 @@
+<div class="separator"></div>
+<div class="portfolio" id="portfolio">
+    <h1 class="portfolio__title" >PORTFOLIO</h1>
+    <div class="portfolio__paragraph-container">
+        <p class="portfolio__paragraph">
+            Aqui na Bossa <strong>Web Solutions</strong> estamos sempre trabalhando para criar soluções sob medida para atender a toda e qualquer necessidade que você possa ter.
+            Seja um site personalizado, onde criamos sua <strong>Identidade Digital</strong>, um Sistema para automatizar seus processos <strong>Transformando o Complexo em Simplicidade</strong>, ou mesmo um App, trazendo a <strong>Solução na palma da sua Mão</strong>.
+            Tudo o que fazemos é sob medida para você! Realizamos seu projeto exatamente como você sonhou!
+        </p>
+        <p class="portfolio__interaction-message">
+            Navegue por nosso portfolio para ver alguns de nossos produtos!<br>
+            E não deixe de visitar essa seção regularmente, sempre a atualizaremos com novos produtos e projetos!
+        </p>
+        <div class="portfolio__projects-container">
+            <div class="portfolio__projects">
+                <app-portfolio-card
+                    *ngFor="let project of projects"
+                    [project]="project">
+                </app-portfolio-card>
+            </div>
+        </div>
+
+        
+        <h3>Nossos Clientes</h3>
+        <div class="portfolio__clientes-container">
+            <a href="https://www.centralconsig.com/" target="_blank">
+                <img class="portfolio__clientes-img" src="assets/images/portfolio-centralconsig.png" alt="Central Consig" />
+            </a>
+            <!--<a href="https://www.mogiemalerta.com.br" target="_blank">
+                <img class="portfolio__clientes-img" src="assets/images/portfolio_mogi_em_alerta.png" alt="Mogi Em Alerta" />
+            </a>
+            <a href="https://www.santoagostinho.org.br" target="_blank">
+                <img class="portfolio__clientes-img" src="assets/images/portfolio_fsa.jpg" alt="Fraternidade Santo Agostinho" />
+            </a>
+        </div>
+        -->
+    </div>
+</div>

@@ -21,6 +21,8 @@ import { SpinnerComponent } from './spinner/spinner.component'
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PortfolioCardComponent } from './portfolio-card/portfolio-card.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     FooterComponent,
     AboutComponent,
     SpinnerComponent,
+    PortfolioComponent,
+    PortfolioCardComponent,
   ],
   imports: [
     BrowserModule,

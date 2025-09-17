@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit {
     const header = document.getElementById('header')
     this.headerHeight = header ? header.offsetHeight : 0
     
-    const components = ['about', 'sites', 'systems', 'apps', 'contact', 'footer']
+    const components = ['about', 'sites', 'systems', 'apps', 'portfolio', 'contact', 'footer']
     
     components.forEach(id => {
       const element = document.getElementById(id)
@@ -53,7 +53,7 @@ export class HeaderComponent implements OnInit {
 
         if (window.innerWidth > 768) {
           if (id === 'contact') {
-            offsetTop += 100
+            offsetTop += 250
           }
           else if (id === 'apps') {
             offsetTop -= 10

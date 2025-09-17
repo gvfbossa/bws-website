@@ -1,0 +1,15 @@
+<div class="separator"></div>
+<div class="portfolio-card" (click)="openPortfolioWebpage()">
+    <div class="portfolio-card__header">
+        <h2 class="portfolio-card__title">{{ project.title }}</h2>
+        <p class="portfolio-card__description">{{ project.description }}</p>
+    </div>
+    <hr />
+    <div class="portfolio-card__image-container">
+        <img *ngFor="let image of project.images; let i = index"
+            [src]="image"
+            alt="{{ project.title }}"
+            class="portfolio-card__image"
+            [ngClass]="{ 'active': i === currentIndex }" />
+    </div>
+</div>

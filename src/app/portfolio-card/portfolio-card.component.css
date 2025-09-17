@@ -1,0 +1,71 @@
+.separator {
+    padding: 2rem;
+}
+
+.portfolio-card {
+    background-color: #f5f5f5; /* Cor de fundo do card */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Esconde partes do conteúdo que ultrapassam as bordas */
+    margin: 10px; /* Margem para espaçar os cards */
+    transition: transform 0.3s; /* Transição suave ao passar o mouse */
+    text-align: center; /* Centraliza o texto */
+    width: 25rem;
+    height: 21rem;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+    cursor: pointer;
+}
+
+.portfolio-card__header {
+    padding: 1rem; /* Espaçamento interno da parte superior */
+    background-color: #f5f5f5;
+}
+
+.portfolio-card__title {
+    font-size: 1.5rem; /* Tamanho da fonte do título */
+    color: #012448; /* Cor do título */
+    margin: 0; /* Remove margens padrão */
+}
+
+.portfolio-card__description {
+    font-size: 1rem; /* Tamanho da fonte da descrição */
+    color: #555; /* Cor do texto da descrição */
+    margin: 20px auto;
+    hyphens: auto;
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 0rem;
+}
+
+.portfolio-card__image-container {
+    position: relative; 
+    height: 30rem;
+    overflow: hidden; /* Oculta as imagens que não estão visíveis */
+}
+
+.portfolio-card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 480px;  /* Mantenha 100% para que a imagem ocupe a largura do contêiner */
+    height: 224px; /* Isso fará a imagem manter a proporção original */
+    opacity: 0; /* Todas as imagens começam invisíveis */
+    transition: opacity 1s ease-in-out; /* Animação de transição suave */
+}
+
+.portfolio-card__image.active {
+    opacity: 1; /* Apenas a imagem ativa será visível */
+}
+
+@media (max-width: 768px) {
+    .portfolio-card__image-container {
+        height: 100px; /* Altura menor em telas menores */
+    }
+
+    .portfolio-card__image {
+        max-height: 100px; /* Altura máxima menor em telas menores */
+    }
+}
