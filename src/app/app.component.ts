@@ -16,7 +16,7 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
-    ).subscribe((event: NavigationEnd) => {
+    ).subscribe((event: any) => {
 
       if (window.gtag) {
         window.gtag('event', 'page_view', {
