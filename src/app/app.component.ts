@@ -1,4 +1,9 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
+// Garante que o TypeScript reconheça o gtag
+declare global { interface Window { gtag?: (...args: any[]) => void } }
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,21 @@ import { Component } from '@angular/core'
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bws-website'
+  title = 'bws-website';
+
+  constructor(private router: Router) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_path: event.urlAfterRedirects,
+          page_title: document.title,
+          page_location: window.location.href
+        });
+      }
+
+    });
+  }
 }
