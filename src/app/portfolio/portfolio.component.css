@@ -68,7 +68,7 @@
 
 .portfolio__clientes-container {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   margin: 20px auto;
 }
 
@@ -77,6 +77,10 @@
   height: 8rem;
   transition: transform 0.3s ease;
   border-radius: 5px;
+}
+
+.portfolio__clientes-img-rect {
+  width: auto; 
 }
 
 .portfolio__clientes-img:hover {
