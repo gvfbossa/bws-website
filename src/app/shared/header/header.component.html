@@ -1,0 +1,58 @@
+<header
+  id="header"
+  class="sticky top-0 z-50 w-full transition-all duration-300"
+  [class.bg-[#012448]]="isSticky"
+>
+  <!-- CONTAINER -->
+  <div
+    class="mx-auto max-w-7xl px-4 transition-all duration-300"
+    [class.py-6]="!isSticky"
+    [class.py-3]="isSticky"
+  >
+    <div
+      class="flex items-center justify-center transition-all duration-300 gap-8"
+      [ngClass]="{
+        'flex-col gap-2': !isSticky,
+        'flex-row gap-8': isSticky
+      }"
+    >
+      <!-- LOGO -->
+      <a
+        href="#top"
+        class="flex items-center transition-all duration-500 ease-out"
+      >
+        <img
+          src="assets/images/header_bws_logo.png"
+          alt="Bossa Web Solutions"
+          class="transition-all duration-300"
+          [class.h-16]="isSticky"
+          [class.md:h-24]="!isSticky"
+          [class.w-auto]="true"
+        />
+        <span
+          class="logo-text text-5xl origin-left whitespace-nowrap transition-all duration-500 ease-out"
+          [class.opacity-100]="!isSticky"
+          [class.scale-100]="!isSticky"
+          [class.opacity-0]="isSticky"
+          [class.scale-90]="isSticky"
+          [class.w-auto]="!isSticky"
+          [class.w-0]="isSticky"
+          [class.overflow-hidden]="isSticky"
+        >
+          <b class="logo-first">B</b>OSSA <b class="logo-first">W</b>EB
+          <b class="logo-first">S</b>OLUTIONS
+        </span>
+      </a>
+
+      <!-- MENU DESKTOP -->
+      <nav class="flex items-center gap-4 transition-all duration-300">
+        <a href="#about" class="menu-item">Sobre</a>
+        <a href="#sites" class="menu-item">Sites</a>
+        <a href="#systems" class="menu-item">Sistemas</a>
+        <a href="#apps" class="menu-item">Apps</a>
+        <a href="#portfolio" class="menu-item">Portfólio</a>
+        <a href="#contact" class="menu-item">Contato</a>
+      </nav>
+    </div>
+  </div>
+</header>

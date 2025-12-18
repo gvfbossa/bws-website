@@ -8,16 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatIconModule } from '@angular/material/icon' 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { HeaderComponent } from './header/header.component'
+import { HeaderComponent } from './shared/header/header.component'
 import { SitesComponent } from './sites/sites.component'
 import { SystemsComponent } from './systems/systems.component'
 import { AppsComponent } from './apps/apps.component'
 import { ContactComponent } from './contact/contact.component'
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './shared/footer/footer.component'
 import { AboutComponent } from './about/about.component'
 import { HttpClientModule } from '@angular/common/http'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
-import { SpinnerComponent } from './spinner/spinner.component'
+import { SpinnerComponent } from './shared/spinner/spinner.component'
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -27,7 +27,6 @@ import { PortfolioCardComponent } from './portfolio-card/portfolio-card.componen
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     SitesComponent,
     SystemsComponent,
     AppsComponent,
@@ -39,6 +38,7 @@ import { PortfolioCardComponent } from './portfolio-card/portfolio-card.componen
     PortfolioCardComponent,
   ],
   imports: [
+    HeaderComponent,
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
