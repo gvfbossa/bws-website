@@ -1,34 +1,16 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sites',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './sites.component.html',
-  styleUrls: ['./sites.component.css']
 })
 export class SitesComponent {
+  activeTab: 'websites' | 'identity' = 'websites';
 
-  showWebsitesContent = false
-  showIdentityContent = true 
-
-  toggleWebsitesContent() {
-    this.showWebsitesContent = !this.showWebsitesContent
-    this.showIdentityContent = false
+  setTab(tab: 'websites' | 'identity') {
+    this.activeTab = tab;
   }
-
-  toggleIdentityContent() {
-    this.showIdentityContent = !this.showIdentityContent
-    this.showWebsitesContent = false
-  }
-
-  toggleOffContents() {
-    this.showWebsitesContent = false
-    this.showIdentityContent = false
-  }
-
-  validateIfContents() {
-    if (!this.showWebsitesContent && !this.showIdentityContent)
-      return true
-    return false
-  }
-
 }

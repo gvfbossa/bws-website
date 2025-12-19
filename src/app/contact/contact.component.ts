@@ -1,10 +1,20 @@
 import { Component } from '@angular/core'
-import { NgForm } from '@angular/forms'
+import { FormsModule, NgForm } from '@angular/forms'
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { ContactService } from '../service/contact.service'
+import { MatIconModule } from '@angular/material/icon'
+import { CommonModule } from '@angular/common'
+import { SpinnerComponent } from '../shared/spinner/spinner.component'
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
+  imports: [
+    MatIconModule,
+    CommonModule,
+    FormsModule,
+    SpinnerComponent
+  ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })

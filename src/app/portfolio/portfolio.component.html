@@ -1,38 +1,89 @@
-<div class="separator"></div>
-<div class="portfolio" id="portfolio">
-    <h1 class="portfolio__title" >PORTFOLIO</h1>
-    <div class="portfolio__paragraph-container">
-        <p class="portfolio__paragraph">
-            Aqui na Bossa <strong>Web Solutions</strong> estamos sempre trabalhando para criar soluções sob medida para atender a toda e qualquer necessidade que você possa ter.
-            Seja um site personalizado, onde criamos sua <strong>Identidade Digital</strong>, um Sistema para automatizar seus processos <strong>Transformando o Complexo em Simplicidade</strong>, ou mesmo um App, trazendo a <strong>Solução na palma da sua Mão</strong>.
-            Tudo o que fazemos é sob medida para você! Realizamos seu projeto exatamente como você sonhou!
-        </p>
-        <p class="portfolio__interaction-message">
-            Navegue por nosso portfolio para ver alguns de nossos produtos!<span class="portfolio__interaction-message-full-view"><br>
-            E não deixe de visitar essa seção regularmente, sempre a atualizaremos com novos produtos e projetos!</span>
-        </p>
-        <div class="portfolio__projects-container">
-            <div class="portfolio__projects">
-                <app-portfolio-card
-                    *ngFor="let project of projects"
-                    [project]="project">
-                </app-portfolio-card>
-            </div>
+<section
+  id="portfolio"
+  class="relative w-full text-white py-32 px-6 md:px-12 overflow-hidden mb-10"
+>
+  <!-- BACKGROUND GLOW -->
+  <div
+    class="absolute -top-32 -left-32 w-[32rem] h-[32rem] bg-[#00aaff]/20 rounded-full blur-[120px]"
+  ></div>
+
+  <div
+    class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start justify-center"
+  >
+    <!-- COLUNA ESQUERDA -->
+    <div
+      class="flex flex-col gap-6 animate-[fadeUp_0.8s_ease-out] justify-center items-center md:items-start w-full"
+    >
+      <h2
+        class="text-4xl md:text-5xl font-extrabold leading-tight text-center md:text-left"
+      >
+        Portfolio
+        <span
+          class="bg-gradient-to-r from-[#0052cc] to-[#66b2ff] bg-clip-text text-transparent"
+          >de Excelência</span
+        >
+      </h2>
+
+      <p class="text-gray-300 text-lg leading-relaxed text-justify">
+        Aqui na <strong>Bossa Web Solutions</strong> criamos soluções sob medida
+        para todas as suas necessidades. Cada projeto é pensado para
+        <strong>transformar sua presença digital</strong> e entregar resultados
+        reais.
+      </p>
+
+      <ul class="space-y-3 text-gray-300 text-left">
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-[#66b2ff]"></span>
+          Sites e Identidade Digital sob medida
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-[#66b2ff]"></span>
+          Sistemas que automatizam processos complexos
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 w-2 h-2 rounded-full bg-[#66b2ff]"></span>
+          Apps que colocam a solução na palma da mão
+        </li>
+      </ul>
+
+      <!-- CTA opcional -->
+      <div class="pt-6 flex justify-center md:justify-start">
+        <a
+          href="https://wa.me/11953468808?text=Quero%20um%20projeto%20personalizado"
+          target="_blank"
+          class="inline-flex rounded-full bg-gradient-to-r from-[#0052cc] to-[#66b2ff] px-12 py-4 font-semibold transition hover:scale-105 shadow-xl"
+        >
+          Quero um projeto sob medida
+        </a>
+      </div>
+    </div>
+
+    <!-- COLUNA DIREITA: CARROSSEL FLEX -->
+    <div class="flex justify-center items-start w-full">
+      <div class="flex flex-col gap-4 w-full max-w-full">
+        <div class="relative overflow-hidden w-full">
+          <div
+            class="flex transition-transform duration-500"
+            [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+          >
+            <app-portfolio-card
+              *ngFor="let project of projects"
+              [project]="project"
+              class="flex-shrink-0 w-full"
+            ></app-portfolio-card>
+          </div>
         </div>
 
-        
-        <h3>Nossos Clientes</h3>
-        <div class="portfolio__clientes-container">
-            <a href="https://www.centralconsig.com/" target="_blank">
-                <img class="portfolio__clientes-img" src="assets/images/portfolio-centralconsig.png" alt="Central Consig" />
-            </a>
-            <a href="https://www.ivofilhoimoveis.com.br" target="_blank">
-                <img class="portfolio__clientes-img portfolio__clientes-img-rect" src="assets/images/portfolio_ivofilhoimoveis.png" alt="Ivo Filho Imóveis" />
-            </a>
-            <!--<a href="https://www.santoagostinho.org.br" target="_blank">
-                <img class="portfolio__clientes-img" src="assets/images/portfolio_fsa.jpg" alt="Fraternidade Santo Agostinho" />
-            </a>
+        <!-- CONTROLES -->
+        <div class="flex justify-center gap-2 mt-4">
+          <button
+            *ngFor="let project of projects; let i = index"
+            (click)="goToSlide(i)"
+            [class.bg-[#66b2ff]]="i === currentIndex"
+            class="w-3 h-3 rounded-full bg-white/30 transition-colors"
+          ></button>
         </div>
-        -->
+      </div>
     </div>
-</div>
+  </div>
+</section>

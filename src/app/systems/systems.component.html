@@ -1,17 +1,129 @@
-<div class="systems" id="systems">
-    <div class="systems__align">
-        <div class="systems__stacked-text">
-            <h1 class="systems__title">SISTEMAS <span class="systems__terminal-dash"></span></h1>
-            <h3 id="typedWord">&nbsp;</h3>
-            <p class="systems__paragraph">
-                Com nossos sistemas personalizados, transformamos a complexidade em simplicidade. 
-                Simplificamos trabalhos manuais, automatizando processos e aumentando a eficiência. 
-                Nossas soluções são feitas sob medida para suas necessidades específicas. 
-                Desde vendas até inventário, oferecemos soluções completas. 
-                Simplifique sua operação e alcance novos patamares de produtividade.
-            </p> 
+<section
+  id="systems"
+  class="relative w-full text-white py-32 px-6 md:px-12 overflow-hidden"
+>
+  <!-- GLOW DE FUNDO -->
+  <div
+    class="absolute -top-32 -left-32 w-[32rem] h-[32rem] bg-[#0052cc]/20 rounded-full blur-[120px]"
+  ></div>
+
+  <div
+    class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center"
+  >
+    <!-- COLUNA ESQUERDA: TEXTO + BENEFÍCIOS -->
+      <div class="flex flex-col gap-10 animate-[fadeUp_0.8s_ease-out] justify-center">
+      <!-- HEADER -->
+      <div class="flex flex-col gap-4">
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          Sistemas
+          <span
+            class="bg-gradient-to-r from-[#0052cc] to-[#66b2ff] bg-clip-text text-transparent"
+          >
+            Inteligentes
+          </span>
+        </h2>
+
+        <!-- TERMINAL -->
+        <div
+          class="font-mono text-lg md:text-xl text-[#66b2ff] flex items-center"
+        >
+          <span>&gt;</span>
+          <span class="ml-2">{{ typedText }}</span>
+          <span class="ml-1 w-[2px] h-6 bg-[#66b2ff] animate-pulse"></span>
         </div>
-        <img class="systems__image" src="assets/images/system_main.png" alt="Systems"/>
+      </div>
+
+      <!-- COPY -->
+      <p class="text-gray-300 leading-relaxed max-w-xl text-lg">
+        Sistemas sob medida que substituem planilhas, reduzem erros humanos e
+        colocam sua empresa no piloto automático.
+        <span class="text-white font-medium">
+          Controle total, clareza e escala.
+        </span>
+      </p>
+
+      <!-- CARD BENEFÍCIOS -->
+      <div
+        class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-6"
+      >
+        <ul class="space-y-4 text-gray-300">
+          <li class="flex items-start gap-3">
+            <span class="mt-2 w-2 h-2 rounded-full bg-[#66b2ff]"></span>
+            Automação completa de processos internos
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 w-2 h-2 rounded-full bg-[#66b2ff]"></span>
+            Sistemas web rápidos, seguros e escaláveis
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 w-2 h-2 rounded-full bg-[#66b2ff]"></span>
+            Integrações com APIs, pagamentos e plataformas
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 w-2 h-2 rounded-full bg-[#66b2ff]"></span>
+            Visão centralizada de dados e operações
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
-<div class="systems__separator"></div>
+
+    <!-- COLUNA DIREITA: IMAGEM + ANTES/DEPOIS -->
+    <div class="flex flex-col gap-10 justify-center">
+      <!-- IMAGEM -->
+      <div class="relative flex justify-center md:justify-end">
+        <!-- GLOW IMAGEM -->
+        <div
+          class="absolute inset-0 bg-[#0052cc]/25 blur-[140px] rounded-full"
+        ></div>
+
+        <img
+          src="assets/images/system_main.png"
+          alt="Sistemas Personalizados"
+          class="relative w-full max-w-[40rem] rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+
+      <!-- ANTES / DEPOIS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- ANTES -->
+        <div
+          class="rounded-xl border border-red-500/20 bg-red-500/5 p-4"
+        >
+          <p class="text-sm font-semibold text-red-400 mb-2">
+            Antes
+          </p>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li>Planilhas quebrando processos</li>
+            <li>Erros manuais recorrentes</li>
+            <li>Falta de visão do negócio</li>
+          </ul>
+        </div>
+
+        <!-- DEPOIS -->
+        <div
+          class="rounded-xl border border-green-500/20 bg-green-500/5 p-4"
+        >
+          <p class="text-sm font-semibold text-green-400 mb-2">
+            Depois
+          </p>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li>Processos automatizados</li>
+            <li>Dados centralizados</li>
+            <li>Decisões rápidas e seguras</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="pt-2 flex justify-center mt-10">
+    <a
+      href="https://wa.me/11953468808?text=Ol%c3%a1%2c+Quero%20um%20sistema%20personalizado"
+      target="_blank"
+      class="inline-flex rounded-full bg-gradient-to-r from-[#0052cc] to-[#66b2ff] px-12 py-4 font-semibold transition hover:scale-105 shadow-xl"
+    >
+      Quero um sistema sob medida
+    </a>
+  </div>
+</section>

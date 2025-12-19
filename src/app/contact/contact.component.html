@@ -1,80 +1,70 @@
-<div class="wrapper" id="contact">
-    <div class="contact-section">
-        <div class="contact-section__text-container">
-            <h1 class="contact-section__title">CONTATO</h1>
-            <h3>Solicite seu orçamento conosco<br></h3>   
-            <h4>Clique nos links abaixo ou preencha o formulário<br><br></h4>
-            <div class="contact-section__adjust-content">
-                <img class="contact-section__whatsapp" src="assets/images/contact_whatsapp.png" alt="WhatsApp Bossa Web Solutions"/>
-                <h3>
-                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=5511953468808" class="contact-section__content-link">
-                        &nbsp;(11) 95346-8808
-                    </a>
-                    <br>
-                </h3>
-            </div>
-            <div class="contact-section__adjust-content">
-                <mat-icon class="contact-section__mat-icon">email</mat-icon>
-                <h3>
-                    <a href="mailto:contato@bossawebsolutions.com.br" class="contact-section__content-link">
-                        &nbsp;contato&#64;bossawebsolutions.com.br
-                    </a> 
-                </h3>  
-            </div>
-            <div class="contact-section__adjust-content">
-                <mat-icon class="contact-section__mat-icon contact-section__social-icon-fb">facebook</mat-icon>
-                <h3>
-                    <a href="https://web.facebook.com/people/Bossa-Web-Solutions/61558090378155/" target="_blank" class="contact-section__content-link">
-                        Bossa Web Solutions
-                    </a> 
-                </h3>  
-            </div>
-            <div class="contact-section__adjust-content">
-                <span class="fab fa-instagram contact-section__mat-icon contact-section__social-icon-insta"></span>
-                <h3>
-                    <a href="https://www.instagram.com/bossawebsolutions/" target="_blank" class="contact-section__content-link">
-                        &commat;bossawebsolutions
-                    </a> 
-                </h3>  
-            </div>
-        </div>
-    </div>
-    <div class="form-section">
-        <form (ngSubmit)="submitGoogleForm(contactForm)" #contactForm="ngForm" novalidate class="form-section__form">
-            <div class="form-section__group">
-                <label for="name">Nome</label>
-                <input type="text" class="form-section__input" id="name" name="name" required [minlength]="3"
-                (blur)="validateField('name', contactForm)" ngModel #name="ngModel">
-                <div *ngIf="name.invalid && name.touched" class="form-section__error">
-                    Nome deve conter pelo menos 3 caracteres
-                </div>
-            </div>
-            <div class="form-section__group">
-                <label for="email">E-mail</label>
-                <input type="email" class="form-section__input" id="email" name="email" required email
-                (blur)="validateField('email', contactForm)" ngModel #email="ngModel">
-                <div *ngIf="email.invalid && email.touched" class="form-section__error">
-                    Email deve estar no formato correto
-                </div>
-            </div>
-            <div class="form-section__group">
-                <label for="phone">Telefone</label>
-                <input type="text" class="form-section__input" id="phone" name="phone" required pattern="[0-9]{10,}"
-                (blur)="validateField('phone', contactForm)" ngModel #phone="ngModel">
-                <div *ngIf="phone.invalid && phone.touched" class="form-section__error">
-                    Telefone deve conter pelo menos 10 números
-                </div>
-            </div>
-            <div class="form-section__group">
-                <label for="message">Mensagem</label>
-                <textarea class="form-section__input" id="message" name="message" rows="5" required minlength="20"
-                (blur)="validateField('message', contactForm)" ngModel #message="ngModel"></textarea>
-                <div *ngIf="(message.invalid && message.touched) && message.value.length < 20" class="form-section__error">
-                    Mensagem deve conter pelo menos 20 caracteres
-                </div>
-            </div>
-            <button type="submit" class="form-section__button" [disabled]="submitting">Enviar</button>
-        </form>
+<section
+  id="contact"
+  class="relative w-full text-white py-32 px-6 md:px-12 overflow-hidden"
+>
+  <!-- BACKGROUND GLOW -->
+  <div class="absolute -top-32 -left-32 w-[32rem] h-[32rem] bg-[#00aaff]/20 rounded-full blur-[120px]"></div>
+
+  <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+    <!-- COLUNA ESQUERDA: FORMULÁRIO -->
+    <div class="flex justify-center md:justify-start w-full">
+      <form (ngSubmit)="submitGoogleForm(contactForm)" #contactForm="ngForm" novalidate class="w-full max-w-md flex flex-col gap-4 animate-[fadeUp_0.8s_ease-out]">
+        <input type="text" name="name" ngModel #name="ngModel" placeholder="Nome" required minlength="3" class="px-4 py-3 rounded-lg border border-[#00aaff] bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#00aaff]">
+        <div *ngIf="name.invalid && name.touched" class="text-red-500 text-sm">Nome deve conter pelo menos 3 caracteres</div>
+
+        <input type="email" name="email" ngModel #email="ngModel" placeholder="E-mail" required class="px-4 py-3 rounded-lg border border-[#00aaff] bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#00aaff]">
+        <div *ngIf="email.invalid && email.touched" class="text-red-500 text-sm">Email deve estar no formato correto</div>
+
+        <input type="text" name="phone" ngModel #phone="ngModel" placeholder="Telefone" required pattern="[0-9]{10,}" class="px-4 py-3 rounded-lg border border-[#00aaff] bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#00aaff]">
+        <div *ngIf="phone.invalid && phone.touched" class="text-red-500 text-sm">Telefone deve conter pelo menos 10 números</div>
+
+        <textarea name="message" ngModel #message="ngModel" placeholder="Mensagem" rows="5" required minlength="20" class="px-4 py-3 rounded-lg border border-[#00aaff] bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#00aaff]"></textarea>
+        <div *ngIf="(message.invalid && message.touched) && message.value.length < 20" class="text-red-500 text-sm">Mensagem deve conter pelo menos 20 caracteres</div>
+
+        <button type="submit" [disabled]="submitting" class="mt-4 px-6 py-3 bg-gradient-to-r from-[#0052cc] to-[#66b2ff] rounded-full font-semibold text-white hover:scale-105 transition-transform">
+          Enviar
+        </button>
+
         <app-spinner [isLoading]="submitting"></app-spinner>
+      </form>
     </div>
-</div>
+
+    <!-- COLUNA DIREITA: CONTATOS / REDES SOCIAIS -->
+    <div class="flex flex-col gap-6 animate-[fadeUp_0.8s_ease-out] justify-center items-start md:max-w-xl w-full">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-left whitespace-nowrap">
+        Contato
+        <span class="bg-gradient-to-r from-[#0052cc] to-[#66b2ff] bg-clip-text text-transparent">Bossa Web Solutions</span>
+      </h2>
+
+      <p class="text-gray-300 text-lg text-justify">
+        Solicite seu orçamento conosco! Clique nos links abaixo.
+      </p>
+
+      <div class="flex flex-col gap-4 mt-6 w-full">
+        <!-- WhatsApp -->
+        <a href="https://api.whatsapp.com/send/?phone=5511953468808" target="_blank" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-[#00aaff]/10 hover:bg-[#00aaff]/20 transition shadow-sm hover:shadow-md w-full">
+          <img src="assets/images/contact_whatsapp.png" alt="WhatsApp Bossa Web Solutions" class="w-8 h-8">
+          <span>(11) 95346-8808</span>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:contato@bossawebsolutions.com.br" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-[#00aaff]/10 hover:bg-[#00aaff]/20 transition shadow-sm hover:shadow-md w-full">
+          <mat-icon class="text-[#00aaff]">email</mat-icon>
+          <span>contato&commat;bossawebsolutions.com.br</span>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://web.facebook.com/people/Bossa-Web-Solutions/61558090378155/" target="_blank" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-[#00aaff]/10 hover:bg-[#00aaff]/20 transition shadow-sm hover:shadow-md w-full">
+          <mat-icon class="text-[#00aaff]">facebook</mat-icon>
+          <span>Bossa Web Solutions</span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/bossawebsolutions/" target="_blank" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-[#00aaff]/10 hover:bg-[#00aaff]/20 transition shadow-sm hover:shadow-md w-full">
+          <span class="fab fa-instagram text-[#00aaff] text-xl"></span>
+          <span>&commat;bossawebsolutions</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

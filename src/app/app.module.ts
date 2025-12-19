@@ -27,18 +27,19 @@ import { PortfolioCardComponent } from './portfolio-card/portfolio-card.componen
 @NgModule({
   declarations: [
     AppComponent,
-    SitesComponent,
-    SystemsComponent,
-    AppsComponent,
-    ContactComponent,
-    FooterComponent,
-    AboutComponent,
-    SpinnerComponent,
-    PortfolioComponent,
-    PortfolioCardComponent,
   ],
   imports: [
     HeaderComponent,
+    AboutComponent,
+    SitesComponent,
+    SystemsComponent,
+    AppsComponent,
+    PortfolioComponent,
+    PortfolioCardComponent,
+    ContactComponent,
+    FooterComponent,
+    SpinnerComponent,
+
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,

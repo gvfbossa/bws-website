@@ -1,33 +1,52 @@
-import { Component } from '@angular/core'
+import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-apps',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './apps.component.html',
-  styleUrls: ['./apps.component.css']
 })
-export class AppsComponent {
-  img1Show = true
-  img2Show = true
-  img3Show = true
+export class AppsComponent implements OnInit, OnDestroy {
+  // BENEFÍCIOS
+  benefits = [
+    { title: 'Automatização', description: 'Tarefas concluídas em segundos' },
+    { title: 'Conexão em tempo real', description: 'Equipe conectada a qualquer hora' },
+    { title: 'Controle total', description: 'Acompanhe resultados na palma da mão' },
+    { title: 'Simplicidade', description: 'Interface intuitiva para todos' },
+  ];
 
-  constructor() {}
+  // IMAGENS FIXAS PARA CADA CARD
+  images = [
+    '/assets/images/app_app1_alt.png',
+    '/assets/images/app_app2_alt.png',
+    '/assets/images/app_app3_alt.png',
+    '/assets/images/app_app1_alt.png', 
+  ];
 
-  toggleImg1() {
-    this.img1Show = !this.img1Show
- }
+  // IMAGENS PRINCIPAIS DO MOCKUP
+  altImages = [
+    '/assets/images/app_app1.png',
+    '/assets/images/app_app2.png',
+    '/assets/images/app_app3.png',
+    '/assets/images/app_app1.png',
+  ];
+  currentImageIndex = 0;
+  currentImage = this.images[0];
+  imageInterval: any;
 
- toggleImg2() {
-  this.img2Show = !this.img2Show
-}
+  ngOnInit() {
+    this.startCarousel();
+  }
 
-toggleImg3() {
-  this.img3Show = !this.img3Show
-}
+  ngOnDestroy() {
+    clearInterval(this.imageInterval);
+  }
 
-resetImgs() {
-  this.toggleImg1()
-  this.toggleImg2()
-  this.toggleImg3()
-}
-
+  startCarousel() {
+    this.imageInterval = setInterval(() => {
+      this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
+      this.currentImage = this.images[this.currentImageIndex];
+    }, 2500);
+  }
 }

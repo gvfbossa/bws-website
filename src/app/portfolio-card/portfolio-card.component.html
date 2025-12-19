@@ -1,15 +1,27 @@
-<div class="separator"></div>
-<div class="portfolio-card" (click)="openPortfolioWebpage()">
-    <div class="portfolio-card__header">
-        <h2 class="portfolio-card__title">{{ project.title }}</h2>
-        <p class="portfolio-card__description">{{ project.description }}</p>
-    </div>
-    <hr />
-    <div class="portfolio-card__image-container">
-        <img *ngFor="let image of project.images; let i = index"
-            [src]="image"
-            alt="{{ project.title }}"
-            class="portfolio-card__image"
-            [ngClass]="{ 'active': i === currentIndex }" />
-    </div>
+<div
+  class="portfolio-card flex flex-col items-center rounded-2xl shadow-2xl p-4 bg-white/5 backdrop-blur-md border border-white/10 transition-transform duration-500"
+  (click)="openPortfolioWebpage()"
+>
+  <!-- IMAGEM DO PROJETO -->
+  <div class="w-full relative mb-4">
+    <div class="absolute inset-0 bg-[#0052cc]/20 blur-[80px] rounded-xl"></div>
+    <img
+      src="{{ project.images[0] }}"
+      alt="{{ project.title }}"
+      class="relative w-full h-auto max-h-60 object-cover rounded-xl shadow-lg"
+    />
+  </div>
+
+  <!-- TEXTO -->
+  <h3 class="text-xl font-semibold text-[#66b2ff] mb-2">{{ project.title }}</h3>
+  <p class="text-gray-300 text-sm text-center break-words">{{ project.description }}</p>
+
+  <!-- BOTÃO -->
+  <button
+    *ngIf="project.url"
+    class="mt-4 px-6 py-2 bg-gradient-to-r from-[#0052cc] to-[#66b2ff] rounded-full font-semibold text-white transition hover:scale-105"
+    (click)="openPortfolioWebpage()"
+  >
+    Ver Projeto
+  </button>
 </div>

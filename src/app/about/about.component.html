@@ -1,62 +1,111 @@
-<div class="about__container" id="about">
-  <h1 class="about__welcome-title">BOAS VINDAS AO SEU SUCESSO DIGITAL</h1>
-  <br><br>
-  <div class="about__image-and-list-container">
-    <div class="about__image-container">
-      <img class="about__welcome-image" src="assets/images/about_main.png" alt="Boas Vindas à Bossa Web Solutions" />
-    </div>
-    <div class="about__list-container">
-      <div class="about__animation-container">
-        <div class="about__spans-container">
-          <span class="about__word"><b class="about__disappear-dash">_</b>TECNOLOG</span>
-          <span class="about__word">INTELIGÊNC</span>
-          <span class="about__word"><b class="about__disappear-dash">_ </b>ESTRATÉG</span>
-          <span class="about__word"><b class="about__disappear-dash">_ _ _ _ </b>CIÊNC</span>
-        </div>
-        <span class="about__base-text">IA</span>
+<section id="about" class="w-full text-white py-24 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto flex flex-col items-center gap-12">
+    <!-- TITULO -->
+    <div class="text-center flex flex-col gap-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-snug">
+        BOAS VINDAS AO
+        <span
+          class="bg-gradient-to-r from-[#0052cc] to-[#66b2ff] bg-clip-text text-transparent"
+        >
+          SEU SUCESSO DIGITAL
+        </span>
+      </h1>
+
+      <div class="relative w-full max-w-3xl mx-auto mt-2 h-10 md:h-12">
+        <span
+          *ngFor="let word of animatedWords; let i = index"
+          class="absolute top-0 font-bold whitespace-nowrap transition-all duration-700 ease-in-out text-white"
+          style="font-size: 1.5rem"
+          [style.left.%]="i * 28"
+          [ngClass]="{
+            'word-active': currentWordIndex === i,
+            'word-ghost': currentWordIndex !== i
+          }"
+        >
+          {{ word }}
+        </span>
       </div>
-      <ul class="about__list">
-        <li>
-          <h2 class="about__main-topic"><mat-icon class="about__icon-style">arrow_forward_ios</mat-icon> Sites</h2>
-          <ul class="about__sublist">
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Portfólios</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Empresas</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Landing Pages</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Blogs</h4></li>
-          </ul>
-        </li>
-        <li>
-          <h2 class="about__main-topic"><mat-icon class="about__icon-style">arrow_forward_ios</mat-icon> Sistemas</h2>
-          <ul class="about__sublist">
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> E-Commerce</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Cadastros</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Relatórios</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Análises Gráficas</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Fluxo de Caixa</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Controle de Estoque</h4></li>
-          </ul>
-        </li>
-        <li>
-          <h2 class="about__main-topic"><mat-icon class="about__icon-style">arrow_forward_ios</mat-icon> Apps</h2>
-          <ul class="about__sublist">
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Lojas</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Delivery</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Mensagens</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Produtividade</h4></li>
-            <li><h4><mat-icon class="about__sub-icon-style">check</mat-icon> Entretenimento</h4></li>
-          </ul>
-        </li>
-      </ul>
     </div>
-  </div>  
-  <p class="about__text">
-    Bem-vindo à <b class="about__bold-text">Bossa Web Solutions</b>, uma empresa dedicada ao desenvolvimento de sites,
-    sistemas e aplicativos sob medida. Nossa equipe altamente qualificada e apaixonada está pronta para transformar
-    suas ideias em realidade digital. Nosso foco está em entender as necessidades exclusivas de cada cliente e oferecer
-    soluções personalizadas que impulsionam o crescimento dos negócios. <b class="about__bold-text">Sites</b>, <b class="about__bold-text">Sistemas</b>, 
-    <b class="about__bold-text">Apps</b>, <b class="about__bold-text">e-Commerce</b>, relatórios e análises inteligentes (<b class="about__bold-text">IA</b>), 
-    integrações com meios de pagamento, gerenciamento de servidores de hospedagem, e muito mais. O que você imaginar, o que precisar.
-    Com compromisso por excelência e inovação, estamos prontos para transformar seu mundo digital.
-  </p>
-</div>
-<div class="about__separator"></div>
+
+    <!-- IMAGEM + PAINEL -->
+    <div class="relative w-full grid grid-cols-[1fr_auto] items-center">
+      <!-- COLUNA DA IMAGEM (CENTRALIZADA) -->
+      <div class="flex justify-center">
+        <img
+          src="assets/images/about_main.png"
+          alt="Boas Vindas à Bossa Web Solutions"
+          class="rounded-3xl shadow-2xl w-full max-w-[50rem] transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+
+      <!-- PAINEL DA LISTA -->
+      <div
+        class="ml-12 w-[300px] rounded-3xl bg-gradient-to-b from-white/5 to-white/0 backdrop-blur-xl border border-white/10 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)] p-6"
+      >
+        <ul class="flex flex-col gap-6">
+          <li
+            *ngFor="let topic of topics"
+            (click)="toggleTopic(topic)"
+            class="group cursor-pointer transition-all duration-300 hover:translate-x-1 hover:bg-white/[0.02] rounded-xl p-2 -m-2"
+          >
+            <!-- HEADER -->
+            <div class="flex justify-between items-center">
+              <h2
+                class="text-sm uppercase tracking-widest transition-all duration-300 text-white/60 group-hover:text-white"
+                [class.text-white]="topic.expanded"
+                [class.font-semibold]="topic.expanded"
+              >
+                {{ topic.name }}
+              </h2>
+
+              <mat-icon
+                class="text-[#66b2ff] opacity-40 transition-all duration-300 group-hover:opacity-100 group-hover:scale-110"
+                [class.rotate-90]="topic.expanded"
+              >
+                chevron_right
+              </mat-icon>
+            </div>
+
+            <!-- INDICADOR -->
+            <div
+              class="h-px mt-3 bg-gradient-to-r from-[#66b2ff]/0 via-[#66b2ff] to-[#66b2ff]/0 opacity-0 blur-[0.5px] transition-all duration-300"
+              [class.opacity-100]="topic.expanded"
+            ></div>
+
+            <!-- SUBITENS -->
+            <ul
+              class="mt-4 space-y-2 text-sm text-gray-400 max-h-0 overflow-hidden transition-all duration-300"
+              [class.max-h-40]="topic.expanded"
+            >
+              <li
+                *ngFor="let item of topic.items"
+                class="flex items-center gap-3"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-[#66b2ff]/70"></span>
+                <span>{{ item }}</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TEXTO FINAL -->
+    <div class="flex flex-col items-center gap-4 mt-10">
+      <div
+        class="w-24 h-px bg-gradient-to-r from-transparent via-[#66b2ff]/60 to-transparent"
+      ></div>
+
+      <p
+        class="text-gray-400 text-base md:text-lg max-w-3xl text-center leading-relaxed"
+      >
+        Transformamos ideias em <b class="text-white">sites</b>,
+        <b class="text-white">sistemas</b> e <b class="text-white">apps</b> sob
+        medida.
+        <span class="block mt-2 text-gray-500">
+          Soluções inteligentes e profissionais para seu negócio crescer.
+        </span>
+      </p>
+    </div>
+  </div>
+</section>

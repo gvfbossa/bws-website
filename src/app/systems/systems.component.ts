@@ -1,79 +1,48 @@
-import { Component, OnInit, OnDestroy,  } from '@angular/core'
+import { Component, OnInit, OnDestroy } from '@angular/core'
 
 @Component({
   selector: 'app-systems',
+  standalone: true,
   templateUrl: './systems.component.html',
-  styleUrls: ['./systems.component.css']
 })
 export class SystemsComponent implements OnInit, OnDestroy {
   words: string[] = [
-    'Transforme o Complexo em Simplicidade',
+    'Automatizando processos...',
+    'Eliminando tarefas manuais...',
+    'Transformando o complexo em simplicidade!',
   ]
-  currentWordIndex: number = 0
-  typingTimeout: any
 
-  constructor() {}
+  typedText = ''
+  currentWord = 0
+  charIndex = 0
+  timeout: any
 
   ngOnInit(): void {
-    this.startTyping()
+    this.type()
   }
 
   ngOnDestroy(): void {
-    if (this.typingTimeout) {
-      clearTimeout(this.typingTimeout)
+    clearTimeout(this.timeout)
+  }
+
+  type(): void {
+    if (this.charIndex < this.words[this.currentWord].length) {
+      this.typedText += this.words[this.currentWord][this.charIndex]
+      this.charIndex++
+      this.timeout = setTimeout(() => this.type(), 80)
+    } else {
+      this.timeout = setTimeout(() => this.erase(), 1200)
     }
   }
 
-  startTyping(): void {
-    this.typeWord()
-  }
-
-  typeWord(): void {
-    const word = this.words[this.currentWordIndex]
-    const wordLength = word.length
-    let index = 0
-
-    const typeNextCharacter = () => {
-      if (index < wordLength) {
-        try {
-          document.getElementById('typedWord')!.textContent += word[index]
-          index++
-  
-          this.typingTimeout = setTimeout(typeNextCharacter, 100)
-        } catch (error) {}
-      } else {
-
-        clearTimeout(this.typingTimeout)
-        this.typingTimeout = setTimeout(() => {
-          this.clearWord()
-        }, 1000)
-      }
+  erase(): void {
+    if (this.charIndex > 0) {
+      this.typedText = this.typedText.slice(0, -1)
+      this.charIndex--
+      this.timeout = setTimeout(() => this.erase(), 40)
+    } else {
+      this.currentWord = (this.currentWord + 1) % this.words.length
+      this.timeout = setTimeout(() => this.type(), 300)
     }
-
-    typeNextCharacter()
-  }
-
-  clearWord(): void {
-    const word = this.words[this.currentWordIndex]
-    let wordLength = word.length
-
-    const clearNextCharacter = () => {
-      if (wordLength > 0) {
-        const typedWordElement = document.getElementById('typedWord')
-        if (typedWordElement) {
-          typedWordElement.textContent = typedWordElement.textContent!.slice(0, -1)
-        }
-        wordLength--
-        this.typingTimeout = setTimeout(clearNextCharacter, 50)
-      } else {
-        clearTimeout(this.typingTimeout)
-        this.currentWordIndex = (this.currentWordIndex + 1) % this.words.length
-        this.typingTimeout = setTimeout(() => {
-          this.typeWord()
-        }, 500)
-      }
-    }
-
-    clearNextCharacter()
   }
 }
