@@ -30,7 +30,7 @@
           [class.w-auto]="true"
         />
         <span
-          class="logo-text text-5xl origin-left whitespace-nowrap transition-all duration-500 ease-out"
+          class="logo-text text-xl md:text-5xl origin-left whitespace-nowrap transition-all duration-500 ease-out"
           [class.opacity-100]="!isSticky"
           [class.scale-100]="!isSticky"
           [class.opacity-0]="isSticky"
@@ -45,13 +45,63 @@
       </a>
 
       <!-- MENU DESKTOP -->
-      <nav class="flex items-center gap-4 transition-all duration-300">
+      <nav
+        class="hidden md:flex items-center gap-4 transition-all duration-300"
+      >
         <a href="#about" class="menu-item">Sobre</a>
         <a href="#sites" class="menu-item">Sites</a>
         <a href="#systems" class="menu-item">Sistemas</a>
         <a href="#apps" class="menu-item">Apps</a>
         <a href="#portfolio" class="menu-item">Portfolio</a>
         <a href="#contact" class="menu-item">Contato</a>
+      </nav>
+    </div>
+
+    <!-- HAMBURGER (MOBILE) -->
+    <button
+      class="md:hidden absolute right-4 top-1/2 -translate-y-1/2 text-white"
+      (click)="toggleMenu()"
+      aria-label="Abrir menu"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+    <!-- MENU MOBILE -->
+    <div
+      *ngIf="menuActive"
+      class="md:hidden absolute top-full left-0 w-full bg-[#012448] shadow-lg"
+    >
+      <nav class="flex flex-col py-4">
+        <a (click)="closeMenu()" href="#about" class="menu-item text-center"
+          >Sobre</a
+        >
+        <a (click)="closeMenu()" href="#sites" class="menu-item text-center"
+          >Sites</a
+        >
+        <a (click)="closeMenu()" href="#systems" class="menu-item text-center"
+          >Sistemas</a
+        >
+        <a (click)="closeMenu()" href="#apps" class="menu-item text-center"
+          >Apps</a
+        >
+        <a (click)="closeMenu()" href="#portfolio" class="menu-item text-center"
+          >Portfolio</a
+        >
+        <a (click)="closeMenu()" href="#contact" class="menu-item text-center"
+          >Contato</a
+        >
       </nav>
     </div>
   </div>

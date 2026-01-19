@@ -1,11 +1,30 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { AboutComponent } from './about/about.component';
+import { AppsComponent } from './apps/apps.component';
+import { ContactComponent } from './contact/contact.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { SitesComponent } from './sites/sites.component';
+import { SystemsComponent } from './systems/systems.component';
 
 declare global { interface Window { dataLayer: any[]; gtag: (...args: any[]) => void; } }
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [
+    HeaderComponent,
+    FooterComponent,
+    AboutComponent,
+    SitesComponent,
+    SystemsComponent,
+    AppsComponent,
+    PortfolioComponent,
+    ContactComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

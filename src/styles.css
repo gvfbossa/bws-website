@@ -22,12 +22,12 @@ body {
   font-weight: 300;
   background: linear-gradient(
       to right,
-      #001830 0%,       /* azul inicial */
-      #001830 20%,      /* ainda azul */
-      #111827 40%,      /* transição para preto */
-      #0a0a0a 60%,      /* preto levemente mais claro */
-      #000000 85%,      /* quase preto */
-      #000000 100%      /* preto final */
+      #001830 0%,
+      #001830 20%,
+      #111827 40%,
+      #0a0a0a 60%,
+      #000000 85%,
+      #000000 100%
     );
   background-repeat: no-repeat;
   background-position: top right;
