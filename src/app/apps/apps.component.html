@@ -1,6 +1,6 @@
 <section
   id="apps"
-  class="relative w-full text-white py-32 px-6 md:px-12 overflow-hidden"
+  class="relative w-full text-white pt-28 pb-4 md:py-32 px-6 md:px-12 overflow-hidden"
 >
   <!-- BACKGROUND GLOW -->
   <div
@@ -9,8 +9,17 @@
 
   <!-- GRID PRINCIPAL -->
   <div
-    class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto] items-center gap-y-20 gap-x-16"
-  >
+  class="
+    relative max-w-7xl mx-auto
+    grid grid-cols-1
+    gap-y-10
+    md:grid-cols-[1fr_auto]
+    md:gap-y-20
+    gap-x-16
+    items-center
+  "
+>
+
     <!-- COLUNA ESQUERDA -->
     <div
       class="flex flex-col items-center justify-center gap-10 animate-[fadeUp_0.8s_ease-out]"
@@ -78,7 +87,7 @@
         <a
           href="https://wa.me/11953468808?text=Quero%20um%20app%20personalizado"
           target="_blank"
-          class="inline-flex rounded-full bg-gradient-to-r from-[#0052cc] to-[#66b2ff] px-12 py-4 font-semibold transition hover:scale-105 shadow-xl"
+          class="text-center inline-flex rounded-full bg-gradient-to-r from-[#0052cc] to-[#66b2ff] px-12 py-4 font-semibold transition hover:scale-105 shadow-xl"
         >
           Quero um app que faça minha empresa crescer
         </a>
@@ -86,9 +95,11 @@
     </div>
 
     <!-- COLUNA DIREITA - MOCKUP PRINCIPAL -->
-    <div class="flex justify-center md:justify-end w-[24rem] lg:w-[28rem]">
+    <div
+      class="flex justify-center w-full md:justify-end md:w-[24rem] lg:w-[28rem]"
+    >
       <div
-        class="relative w-full border-4 border-gray-300 rounded-3xl overflow-hidden shadow-2xl"
+        class="relative w-[16rem] sm:w-[18rem] md:w-full border-4 border-gray-300 rounded-3xl overflow-hidden shadow-2xl transition-transform hover:scale-105"
       >
         <img
           [src]="currentImage"

@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, ElementRef } from '@angular/core'
+import { Component, OnInit, Renderer2, ElementRef, HostListener } from '@angular/core'
 import { MatIconModule } from '@angular/material/icon'
 import { CommonModule } from '@angular/common';
 
@@ -6,18 +6,26 @@ import { CommonModule } from '@angular/common';
   selector: 'app-about',
   standalone: true,
   imports: [
-    MatIconModule, 
+    MatIconModule,
     CommonModule],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
 
 export class AboutComponent implements OnInit {
+  isMobile = window.innerWidth < 768;
+
   topics = [
     { name: 'Sites', expanded: false, items: ['Portfólios', 'Empresas', 'Landing Pages', 'Portais de Notícias', 'Blogs'] },
     { name: 'Sistemas', expanded: false, items: ['E-Commerce', 'Cadastros', 'Relatórios', 'Fluxo de Caixa', 'Controle de Estoque'] },
     { name: 'Apps', expanded: false, items: ['Lojas', 'Delivery', 'Mensagens', 'Produtividade', 'Entretenimento'] },
   ];
+
+
+  @HostListener('window:resize')
+  onResize(): void {
+    this.isMobile = window.innerWidth < 768;
+  }
 
   toggleTopic(topic: any) {
     this.topics.forEach(t => {

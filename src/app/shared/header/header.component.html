@@ -19,18 +19,20 @@
       <!-- LOGO -->
       <a
         href="#"
-        class="flex items-center transition-all duration-500 ease-out"
+        class="flex items-center transition-all duration-500 ease-out
+       -translate-x-2 md:translate-x-0"
       >
         <img
           src="assets/images/header_bws_logo.png"
           alt="Bossa Web Solutions"
-          class="transition-all duration-300 h-10"
-          [class.h-16]="isSticky"
+          class="transition-all duration-300
+                h-20 md:h-24"
+          [class.h-10]="isSticky"
           [class.md:h-24]="!isSticky"
           [class.w-auto]="true"
         />
         <span
-          class="logo-text text-xl md:text-5xl origin-left whitespace-nowrap transition-all duration-500 ease-out"
+          class="logo-text text-2xl md:text-5xl origin-left whitespace-nowrap transition-all duration-500 ease-out"
           [class.opacity-100]="!isSticky"
           [class.scale-100]="!isSticky"
           [class.opacity-0]="isSticky"
@@ -39,7 +41,7 @@
           [class.w-0]="isSticky"
           [class.overflow-hidden]="isSticky"
         >
-          <b class="logo-first">B</b>OSSA <b class="logo-first">W</b>EB
+          <b class="logo-first">B</b>OSSA <b class="logo-first">W</b>EB <br class="block md:hidden" /> 
           <b class="logo-first">S</b>OLUTIONS
         </span>
       </a>
