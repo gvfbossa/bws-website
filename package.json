@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:bws-website": "node dist/bws-website/server/server.mjs"
+    "serve:ssr:bws-website": "node dist/bws-website/server/server.mjs",
+    "deploy": "rm -rf docs/ && ng build --configuration production && cp src/assets/images/favicon.png docs/ && cp src/sitemap.xml docs/ && cp src/robots.txt docs/ && firebase deploy"
   },
   "private": true,
   "dependencies": {
